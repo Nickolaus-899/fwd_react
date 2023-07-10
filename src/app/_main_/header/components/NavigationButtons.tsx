@@ -1,3 +1,4 @@
+"use client"
 import React, {JSX} from 'react'
 import '@/app/_main_/css/position.css'
 
@@ -6,39 +7,31 @@ import person from "@/app/_main_/images/person-check.svg"
 import chevron from "@/app/_main_/images/chevron-left.svg"
 
 import Image from "next/image";
-import Link from "next/link";
 
 const NavigationButtons: ({
-                              prevPage,
-                              currentPage
+
 } : {
-    prevPage : string,
-    currentPage: string
+
 }) => JSX.Element = ({
-                                                  prevPage,
-                                                  currentPage
+
 }) => {
+
     return (
         <>
             <div className="NavWrapper">
-                <Link className="NavItem" href="/my">
+                <a className="NavItem" href="/my">
                     <Image src={cart} alt="cart"/>
-                </Link>
+                </a>
 
-                <Link className="NavItem" href="/auth">
+                <a className="NavItem" href="/auth">
                     <Image src={person} alt="person"/>
-                </Link>
+                </a>
             </div>
-
-            {
-                currentPage !== 'home' ? (
-                    <div className="ChevronWrapper">
-                        <Link className="ChevronItem" href={'/' + prevPage}>
-                            <Image src={chevron} alt="chevron"/>
-                        </Link>
-                    </div>
-                ) : null
-            }
+            <div className="ChevronWrapper">
+                <a className="ChevronItem" href={'/'}>
+                    <Image src={chevron} alt="chevron"/>
+                </a>
+            </div>
         </>
     )
 }
