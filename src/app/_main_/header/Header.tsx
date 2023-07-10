@@ -6,10 +6,16 @@ import Logo from "@/app/_main_/header/components/Logo";
 import NavigationButtons from "@/app/_main_/header/components/NavigationButtons";
 
 function Header() {
+    const prevPage = 'home'
+    const currentPage = 'home'
+
     return (
         <PositionHeader>
             <Logo/>
-            <NavigationButtons/>
+            <NavigationButtons
+                prevPage={prevPage}
+                currentPage={currentPage}
+            />
         </PositionHeader>
     )
 }

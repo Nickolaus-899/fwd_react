@@ -44,3 +44,18 @@ export const NavItem = styled(Link)`
   height: 1.5625rem;
   margin-right: 15px;
 `
+
+export const ChevronWrapper = styled("div")`
+  position: absolute;
+  
+  left: 10px;
+`
+
+export const ChevronItem = styled(Link)`
+  width: 1.25rem;
+  height: 1.25rem;
+`
+
+export const ClickableLink = styled("button")`
+
+`
