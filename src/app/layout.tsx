@@ -1,8 +1,9 @@
 import React from "react";
 import './globals.css'
 import { Montserrat } from '@next/font/google'
-import Header from "@/app/_main_/header/components/Header";
-import Footer from "@/app/_main_/footer/components/Footer";
+import Header from "@/app/_main_/header/Header";
+import Footer from "@/app/_main_/footer/Footer";
+import Head from "next/head";
 
 const montserrat = Montserrat({
     subsets: ['latin'],
@@ -27,6 +28,9 @@ export default function RootLayout({
                   content="width=device-width, initial-scale=1.0"/>
             <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
             <title>InnoMenu</title>
+            <Head>
+                <title>InnoMenu</title>
+            </Head>
         </head>
 
 
