@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from "styled-components";
 import '@/app/globals.css'
-import {PositionFooter} from "@/app/_main_/custom/position";
+
+import '@/app/_main_/css/position.css'
 
 function Footer() {
     return (
-        <PositionFooter>Footer</PositionFooter>
+        <div className="GeneralFooterHeader PositionFooter">Footer</div>
     )
 }
 

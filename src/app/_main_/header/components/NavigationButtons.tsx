@@ -1,11 +1,12 @@
 import React, {JSX} from 'react'
-import {ChevronItem, ChevronWrapper, ClickableLink, NavItem, NavWrapper} from "@/app/_main_/custom/position";
+import '@/app/_main_/css/position.css'
 
 import cart from "@/app/_main_/images/cart.svg"
 import person from "@/app/_main_/images/person-check.svg"
 import chevron from "@/app/_main_/images/chevron-left.svg"
 
 import Image from "next/image";
+import Link from "next/link";
 
 const NavigationButtons: ({
                               prevPage,
@@ -19,25 +20,23 @@ const NavigationButtons: ({
 }) => {
     return (
         <>
-            <NavWrapper>
-                <NavItem href="/my">
+            <div className="NavWrapper">
+                <Link className="NavItem" href="/my">
                     <Image src={cart} alt="cart"/>
-                    <ClickableLink>Click
-                    </ClickableLink>
-                </NavItem>
+                </Link>
 
-                <NavItem href="/auth">
+                <Link className="NavItem" href="/auth">
                     <Image src={person} alt="person"/>
-                </NavItem>
-            </NavWrapper>
+                </Link>
+            </div>
 
             {
                 currentPage !== 'home' ? (
-                    <ChevronWrapper>
-                        <ChevronItem href={'/' + prevPage}>
+                    <div className="ChevronWrapper">
+                        <Link className="ChevronItem" href={'/' + prevPage}>
                             <Image src={chevron} alt="chevron"/>
-                        </ChevronItem>
-                    </ChevronWrapper>
+                        </Link>
+                    </div>
                 ) : null
             }
         </>

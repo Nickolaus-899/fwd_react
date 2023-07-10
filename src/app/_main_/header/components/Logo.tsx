@@ -1,5 +1,5 @@
 import React from 'react'
-import {InnoLogo} from "@/app/_main_/custom/position";
+import '@/app/_main_/css/position.css'
 import {Kaushan_Script} from '@next/font/google'
 
 const kaushanScript = Kaushan_Script({
@@ -9,7 +9,11 @@ const kaushanScript = Kaushan_Script({
 
 function Logo() {
     return (
-        <InnoLogo className={kaushanScript.className}>InnoFood</InnoLogo>
+        <div className={kaushanScript.className}>
+            <div className="InnoLogo">
+                InnoFood
+            </div>
+        </div>
     )
 }
 
