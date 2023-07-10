@@ -1,5 +1,6 @@
 "use client"
 import styled from "styled-components";
+import Link from "next/link";
 
 export const GeneralFooterHeader = styled("div")`
   position: fixed;
@@ -28,4 +29,18 @@ export const InnoLogo = styled("div")`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+`
+
+export const NavWrapper = styled("div")`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  
+  right: 20px;
+`
+
+export const NavItem = styled(Link)`
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-right: 15px;
 `
