@@ -8,6 +8,11 @@ import chevron from "@/app/_main_/images/chevron-left.svg"
 
 import Image from "next/image";
 
+import {BiHomeAlt2} from "react-icons/bi";
+import {GrHome} from "react-icons/gr";
+import {IoHomeOutline} from "react-icons/io5";
+import {FcHome} from "react-icons/fc";
+
 const NavigationButtons: ({
 
 } : {
@@ -29,7 +34,7 @@ const NavigationButtons: ({
             </div>
             <div className="ChevronWrapper">
                 <a className="ChevronItem" href={'/'}>
-                    <Image src={chevron} alt="chevron"/>
+                    <BiHomeAlt2 size={25}/>
                 </a>
             </div>
         </>
