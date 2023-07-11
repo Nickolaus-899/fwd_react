@@ -1,0 +1,61 @@
+.AboutLogo {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.Partners {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+}
+
+.SinglePartner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.PartnerLogo {
+    transition: transform 0.3s ease-in;
+}
+
+.PartnerLogo:hover {
+    transform: translate(3px, -10px);
+}
+
+.SinglePartnerImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    max-width: 300px;
+}
+
+.PartnersList {
+    display: flex;
+    flex-direction: column;
+}
+
+.PartnersList a {
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease-in;
+}
+
+@media (min-width: 1000px) {
+    .PartnersList a {
+        font-size: 30px;
+        font-weight: 600;
+        transition: color 0.3s ease-in;
+    }
+}
+
+.PartnersList a:hover {
+    color: crimson;
+
+    cursor: pointer;
+}
