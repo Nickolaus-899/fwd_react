@@ -19,7 +19,7 @@ function Veggie() {
             setVeggie(JSON.parse(check));
         } else {
             const api = await
-                fetch(`${API}${randomAPI}?apiKey=${process.env.NEXT_PUBLIC_API_KEY}&number=4&tag=vegetarian`);
+                fetch(`${API}${randomAPI}?apiKey=${process.env.NEXT_PUBLIC_API_KEY}&number=8&tag=vegetarian`);
             const data = await api.json();
 
             localStorage.setItem("veggie", JSON.stringify(data.recipes));

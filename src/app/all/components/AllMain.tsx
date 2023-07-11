@@ -9,7 +9,9 @@ function AllMain() {
                 You have selected all dishes!
             </div>
             <Popular/>
-            <Veggie/>
+            <div className="VeggiePosition">
+                <Veggie/>
+            </div>
         </div>
     )
 }
