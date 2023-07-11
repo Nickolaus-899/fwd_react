@@ -2,7 +2,11 @@ import React from 'react'
 
 function CuisineMain({params} : {params : {cuisine: string}}) {
     return (
-        <div>Cuisine: {params.cuisine}</div>
+        <div>
+            <div className="CuisineTitle">
+                You have chosen {params.cuisine} cuisine!
+            </div>
+        </div>
     )
 }
 

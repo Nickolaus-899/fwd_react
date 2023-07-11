@@ -1,0 +1,29 @@
+.CategoryList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.CategoryItem {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.CategoryItem svg{
+    width: 30px;
+    height: 30px;
+
+    transition: fill 0.3s ease-in;
+}
+
+.CategoryItem:hover svg {
+    fill: crimson;
+}
+
+.CuisineTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}

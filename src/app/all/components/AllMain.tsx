@@ -2,7 +2,11 @@ import React from 'react'
 
 function AllMain() {
     return (
-        <div>AllMain</div>
+        <div>
+            <div className="CuisineTitle">
+                You have selected all dishes!
+            </div>
+        </div>
     )
 }
 
