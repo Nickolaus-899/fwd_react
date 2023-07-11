@@ -8,9 +8,35 @@
 }
 
 .FoodItem {
-    width: 500px;
-    height: 500px;
+    width: 280px;
+    height: 280px;
     border-radius: 2rem;
+}
+
+.TitleText {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    max-width: 20rem;
+
+    overflow-wrap: break-word;
+}
+
+@media (min-width: 1000px) {
+    .FoodItem {
+        width: 500px;
+        height: 500px;
+        border-radius: 2rem;
+    }
+
+    .TitleText {
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 700;
+        max-width: 50rem;
+
+        overflow-wrap: break-word;
+    }
 }
 
 .HomeWrapper {
@@ -25,15 +51,9 @@
 .HomeTitle {
     /*margin-left: 20%;*/
     /*margin-right: 20%;*/
+    margin-left: 20px;
 }
-.TitleText {
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: 700;
-    max-width: 50rem;
 
-    overflow-wrap: break-word;
-}
 
 .MyButton {
     display: inline-block;

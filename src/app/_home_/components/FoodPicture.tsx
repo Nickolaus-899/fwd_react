@@ -1,12 +1,11 @@
-import React from 'react'
-import food from '@/app/_home_/images/food.jpg'
-import Image from "next/image";
+import React, {JSX} from 'react'
+import Image, {StaticImageData} from "next/image";
 
-function FoodPicture() {
+const FoodPicture: ({food} : {food:string|StaticImageData}) => JSX.Element = ({food}) => {
 
     return (
         <div className="FoodWrapper">
-            <Image src={food} alt={"food"} className="FoodItem"/>
+            <Image src={food} alt={"food"} className="FoodItem" width={500} height={500}/>
         </div>
     )
 }

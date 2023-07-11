@@ -1,10 +1,11 @@
 "use client"
 import React, {useEffect, useState} from 'react'
-import {API, emptyArrayRand, randomAPI} from "@/app/constants";
+import {API, emptyArrayShort, randomAPI} from "@/app/constants";
 import Image from "next/image";
+import FoodItem from "@/app/all/components/FoodItem";
 
 function Veggie() {
-    const [veggie, setVeggie] = useState(emptyArrayRand)
+    const [veggie, setVeggie] = useState(emptyArrayShort)
 
     useEffect(() => {
         getPopular();
@@ -32,18 +33,7 @@ function Veggie() {
                 {
                     veggie.map((recipe) => {
                         return (
-                            <a href={"/dish/" + recipe.id} key={recipe.id}>
-                                <div className="PopularItem">
-                                    <Image
-                                        className="PopularItemImg"
-                                        src={recipe.image}
-                                        alt={recipe.title}
-                                        width={200}
-                                        height={200}
-                                    />
-                                    <p className="FoodText">{recipe.title}</p>
-                                </div>
-                            </a>
+                            <FoodItem recipe={recipe} key={recipe.id}/>
                         )
                     })
                 }
