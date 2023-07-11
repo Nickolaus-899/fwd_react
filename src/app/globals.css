@@ -8,4 +8,5 @@
 .inside {
   margin-top: 75px;
   margin-bottom: 75px;
+  min-height: 501px;
 }

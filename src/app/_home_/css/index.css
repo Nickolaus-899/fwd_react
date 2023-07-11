@@ -1,9 +1,99 @@
 .FoodWrapper {
+    margin-top: 15px;
+    margin-left: 30px;
 
+    /*display: flex;*/
+    /*justify-content: normal;*/
+    /*margin-top: 90px;*/
 }
 
 .FoodItem {
     width: 500px;
     height: 500px;
     border-radius: 2rem;
+}
+
+.HomeWrapper {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.HomeTitle {
+    /*margin-left: 20%;*/
+    /*margin-right: 20%;*/
+}
+.TitleText {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    max-width: 50rem;
+
+    overflow-wrap: break-word;
+}
+
+.MyButton {
+    display: inline-block;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 44px;
+
+    border: 3px solid black;
+    border-radius: 50px;
+    color: black;
+
+    font-weight: 700;
+    font-size: 16px;
+
+    text-decoration: none;
+
+    transition: border 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.MyButton:hover {
+    background-color: crimson;
+    border: 3px solid crimson;
+
+    color: white;
+}
+
+.MyButton div {
+    transition: color 0.6s ease-in;
+}
+
+.MyButton:hover div {
+    color: white;
+}
+
+.MyButton svg {
+    transition: fill 0.6s ease-in;
+}
+
+.MyButton:hover svg {
+    fill: white;
+}
+
+.Teller {
+    width: 25px;
+    height: 25px;
+
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: -3px;
+
+
+}
+
+.ButtonContentWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.MyButtonPosition {
+    margin-top: 20px;
 }
