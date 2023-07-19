@@ -1,7 +1,7 @@
 .GeneralFooterHeader {
     position: absolute;
     width: 100%!important;
-    height: 70px;
+    height: 10vh;
 
     display: flex;
     flex-direction: row;

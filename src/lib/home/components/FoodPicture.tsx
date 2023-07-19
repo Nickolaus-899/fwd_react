@@ -1,5 +1,6 @@
 import React, {JSX} from 'react'
 import Image, {StaticImageData} from "next/image";
+// import "./../css/index.css"
 
 const FoodPicture: ({food} : {food:string|StaticImageData}) => JSX.Element = ({food}) => {
 

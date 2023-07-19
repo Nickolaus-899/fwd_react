@@ -7,7 +7,9 @@
 }
 
 .inside {
-  margin-top: 75px;
-  margin-bottom: 75px;
-  min-height: 501px;
+  margin-top: 11vh;
+  margin-bottom: 11vh;
+  min-height: 68vh;
+
+  max-width: 98vw !important;
 }
