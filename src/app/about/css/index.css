@@ -44,6 +44,8 @@
 .PartnersList a {
     font-size: 20px;
     font-weight: 600;
+    text-decoration: none;
+    color: black;
     transition: color 0.3s ease-in;
 }
 
