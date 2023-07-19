@@ -70,10 +70,10 @@ function MyMain() {
                             <h2>Total:</h2>
                         </div>
                         <div className="col-md-6">
-                            <h2 className="calories"> 900 kk </h2>
+                            <h2 className="calories"> 1200 kk </h2>
                         </div>
                         <div className="price col-md-3">
-                            <h2> 900 rub </h2>
+                            <h2> 1200 rub </h2>
                         </div>
 
                     </div>
