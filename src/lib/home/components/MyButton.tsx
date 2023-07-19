@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import teller from '@/app/_home_/images/teller.svg'
+import teller from '@/lib/home/images/teller.svg'
 
 function MyButton() {
     return (

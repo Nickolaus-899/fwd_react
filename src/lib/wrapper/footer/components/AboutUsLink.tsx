@@ -1,5 +1,5 @@
 import React from 'react'
-import '@/app/_main_/css/position.css'
+import '@/lib/wrapper/css/position.css'
 
 function AboutUsLink() {
     return (

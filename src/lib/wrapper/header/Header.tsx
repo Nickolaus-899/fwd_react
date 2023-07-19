@@ -1,9 +1,9 @@
 import React, {JSX} from 'react'
 import '@/app/globals.css'
-import '@/app/_main_/css/position.css'
-import '@/app/_main_/css/bootstrap.min.css'
-import Logo from "@/app/_main_/header/components/Logo";
-import NavigationButtons from "@/app/_main_/header/components/NavigationButtons";
+import '@/lib/wrapper/css/position.css'
+import '@/lib/wrapper/css/bootstrap.min.css'
+import Logo from "@/lib/wrapper/header/components/Logo";
+import NavigationButtons from "@/lib/wrapper/header/components/NavigationButtons";
 
 const Header: ({
 

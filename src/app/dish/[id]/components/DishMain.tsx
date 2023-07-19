@@ -1,11 +1,11 @@
 "use client"
 import React, {useEffect, useState} from 'react'
 import {API, emptyVarComplex} from "@/app/constants";
-import FoodPicture from "@/app/_home_/components/FoodPicture";
-import "@/app/_home_/css/index.css"
-import "@/app/_home_/css/bootstrap.min.css"
+import FoodPicture from "@/lib/home/components/FoodPicture";
+import "@/lib/home/css/index.css"
+import "@/lib/home/css/bootstrap.min.css"
 import {LuVegan} from "react-icons/lu";
-import MyButton from "@/app/_home_/components/MyButton";
+import MyButton from "@/lib/home/components/MyButton";
 
 function DishMain({params} : {params : {id: string}}) {
     const [details, setDetails] = useState(emptyVarComplex);

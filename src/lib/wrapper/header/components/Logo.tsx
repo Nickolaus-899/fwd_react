@@ -1,6 +1,6 @@
 import React from 'react'
-import '@/app/_main_/css/position.css'
-import '@/app/_main_/css/bootstrap.min.css'
+import '@/lib/wrapper/css/position.css'
+import '@/lib/wrapper/css/bootstrap.min.css'
 import {Kaushan_Script} from '@next/font/google'
 
 const kaushanScript = Kaushan_Script({

@@ -1,7 +1,7 @@
 import React from "react";
-import '@/app/_home_/css/index.css'
-import '@/app/_home_/css/bootstrap.min.css'
-import HomeMain from "@/app/_home_/components/HomeMain";
+import '@/lib/home/css/index.css'
+import '@/lib/home/css/bootstrap.min.css'
+import HomeMain from "@/lib/home/components/HomeMain";
 
 
 export default function Home() {

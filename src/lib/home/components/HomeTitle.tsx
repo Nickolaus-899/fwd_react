@@ -1,5 +1,5 @@
 import React from 'react'
-import MyButton from "@/app/_home_/components/MyButton";
+import MyButton from "@/lib/home/components/MyButton";
 
 function HomeTitle() {
     return (

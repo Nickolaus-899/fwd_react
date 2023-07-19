@@ -1,7 +1,7 @@
 import React from 'react'
-import FoodPicture from "@/app/_home_/components/FoodPicture";
-import food from "@/app/_home_/images/food.jpg";
-import HomeTitle from "@/app/_home_/components/HomeTitle";
+import FoodPicture from "@/lib/home/components/FoodPicture";
+import food from "@/lib/home/images/food.jpg";
+import HomeTitle from "@/lib/home/components/HomeTitle";
 function HomeMain() {
     return (
         <div className="HomeWrapper">

@@ -2,8 +2,8 @@ import React from "react";
 import './globals.css';
 import './bootstrap.min.css'
 import { Montserrat } from '@next/font/google'
-import Header from "@/app/_main_/header/Header";
-import Footer from "@/app/_main_/footer/Footer";
+import Header from "@/lib/wrapper/header/Header";
+import Footer from "@/lib/wrapper/footer/Footer";
 import Head from "next/head";
 
 const montserrat = Montserrat({

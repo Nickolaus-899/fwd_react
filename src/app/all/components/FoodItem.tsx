@@ -4,7 +4,7 @@ import {AnswerShort} from "@/app/constants";
 
 const FoodItem: ({recipe} : {recipe: AnswerShort}) => JSX.Element = ({recipe}) => {
     return (
-        <a href={"/dish/" + recipe.id}>
+        <a href={"/dish/" + recipe.id} className="DecorLink">
             <div className="PopularItem">
                 <Image
                     className="PopularItemImg"
