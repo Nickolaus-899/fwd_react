@@ -1,5 +1,6 @@
 import React from 'react'
 import '@/app/all/css/index.css'
+import '@/app/all/css/bootstrap.min.css'
 import Italian from "@/app/all/components/cuisines/Italian";
 import American from "@/app/all/components/cuisines/American";
 import Japanese from "@/app/all/components/cuisines/Japanese";

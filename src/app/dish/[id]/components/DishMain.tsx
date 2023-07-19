@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 import {API, emptyVarComplex} from "@/app/constants";
 import FoodPicture from "@/app/_home_/components/FoodPicture";
 import "@/app/_home_/css/index.css"
+import "@/app/_home_/css/bootstrap.min.css"
 import {LuVegan} from "react-icons/lu";
 import MyButton from "@/app/_home_/components/MyButton";
 

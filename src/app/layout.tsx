@@ -1,5 +1,6 @@
 import React from "react";
-import './globals.css'
+import './globals.css';
+import './bootstrap.min.css'
 import { Montserrat } from '@next/font/google'
 import Header from "@/app/_main_/header/Header";
 import Footer from "@/app/_main_/footer/Footer";

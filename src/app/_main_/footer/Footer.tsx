@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import '@/app/globals.css'
+import '@/app/bootstrap.min.css'
 
 import '@/app/_main_/css/position.css'
 import SomeText from "@/app/_main_/footer/components/SomeText";

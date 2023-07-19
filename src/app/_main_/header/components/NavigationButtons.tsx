@@ -1,6 +1,7 @@
 "use client"
 import React, {JSX} from 'react'
 import '@/app/_main_/css/position.css'
+import '@/app/_main_/css/bootstrap.min.css'
 
 import cart from "@/app/_main_/images/cart.svg"
 import person from "@/app/_main_/images/person-check.svg"
