@@ -1,22 +1,25 @@
 {
-  "users" : [
+  "clients" : [
     {
       "id": 1,
       "name": "Nickolaus",
       "email": "hohoho@mail.ru",
+      "admin": true,
       "dishes": [
         {
           "id": 100,
           "title": "Spaghetti",
           "price": 200,
           "calories": 400,
-          "img": ""
+          "vegetarian": true,
+          "img": "https://img.delo-vcusa.ru/2019/11/Spagetti-Putaneska.jpg"
         },
         {
           "id": 200,
           "title": "Dumplings",
-          "price": 200,
-          "calories": 400,
+          "price": 500,
+          "calories": 800,
+          "vegetarian": false,
           "img": "https://www.gastronom.ru/binfiles/images/20160506/b27984f0.jpg"
         }
       ]
@@ -24,7 +27,18 @@
     {
       "id": 2,
       "name": "Kseniia",
-      "email": "hahaha@mail.ru"
+      "email": "hahaha@mail.ru",
+      "admin": true,
+      "dishes": [
+        {
+          "id": 300,
+          "title": "Borsch",
+          "price": 350,
+          "calories": 700,
+          "vegetarian": false,
+          "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg"
+        }
+      ]
     }
   ]
 }

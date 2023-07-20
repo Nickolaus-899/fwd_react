@@ -33,7 +33,7 @@
 
   min-width: 190px;
 
-  transition: border 0.2s ease-in, background-color 0.2s ease-in;
+  transition: border 0.3s ease-in, background-color 0.3s ease-in, color 0.6s ease-in;
 }
 
 .MyButton:hover {
@@ -41,6 +41,11 @@
   border: 3px solid crimson;
 
   color: white;
+}
+
+.MyButton:active {
+  background-color: darkred;
+  border: 3px solid darkred;
 }
 
 .MyButton div {

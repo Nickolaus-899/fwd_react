@@ -1,6 +1,6 @@
 import React, {JSX} from 'react'
 import Image from "next/image";
-import {AnswerShort} from "@/app/constants";
+import {AnswerShort} from "@/app/classes";
 
 const FoodItem: ({recipe} : {recipe: AnswerShort}) => JSX.Element = ({recipe}) => {
     return (

@@ -1,6 +1,6 @@
 "use client"
 import React, {useEffect, useState} from 'react'
-import {API, complexAPI, emptyArrayShort} from "@/app/constants";
+import {API, complexAPI, emptyArrayShort} from "@/app/classes";
 import Image from "next/image";
 import FoodItem from "@/app/all/components/FoodItem";
 
