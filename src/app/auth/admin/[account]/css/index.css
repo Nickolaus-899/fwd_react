@@ -5,7 +5,50 @@
     align-items: center;
 }
 
+.FoodItemInList {
+    margin-top: 20px;
+    border: 0.5vw solid black;
+    padding: 3vw;
+    border-radius: 5vw;
+
+    display: flex;
+}
+
+.FoodItemInListPosition {
+    flex-direction: column;
+}
+
+.FoodItemInListInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 2vw;
+}
+
+.FoodItemInListInfo h1 {
+    font-size: 3vw;
+}
+
+.FoodItemInListInfo div {
+    font-size: 2vw;
+}
+
 .FoodItemInListImage {
     width: 30vw;
     height: 100%;
+
+    border-radius: 4vw;
+}
+
+.VeggieText {
+    color: green;
+    font-weight: 700;
+}
+
+@media (min-width: 900px) {
+    .FoodItemInListPosition {
+        flex-direction: row;
+    }
 }
