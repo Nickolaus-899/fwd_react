@@ -69,3 +69,6 @@ export const emptyVarComplex: AnswerComplex = {
     vegetarian: false,
     diets: [""]
 }
+
+
+export const addDishFormType: string = 'add_dish'

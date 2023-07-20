@@ -1,6 +1,6 @@
 import React, {JSX} from 'react'
 import {Dish} from "@/app/classes";
-import Image from "next/image";
+// import Image from "next/image";
 
 const FoodItemInList: ({dish} : {dish: Dish}) => JSX.Element = ({dish}) => {
     return (
