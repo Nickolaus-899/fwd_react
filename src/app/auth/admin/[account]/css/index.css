@@ -15,7 +15,8 @@
 }
 
 .FoodItemInListPosition {
-    flex-direction: column;
+    /*flex-direction: column;*/
+    width: 55vw;
 }
 
 .FoodItemInListInfo {
@@ -48,7 +49,4 @@
 }
 
 @media (min-width: 900px) {
-    .FoodItemInListPosition {
-        flex-direction: row;
-    }
 }
