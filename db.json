@@ -1,0 +1,29 @@
+{
+  "users" : [
+    {
+      "id": 1,
+      "name": "Nickolaus",
+      "email": "hohoho@mail.ru",
+      "dishes": [
+        {
+          "id": 100,
+          "title": "Spaghetti",
+          "price": 200,
+          "calories": 400,
+          "img":
+        },
+        {
+          "id": 200,
+          "title": "Spaghetti",
+          "price": 200,
+          "calories": 400
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Kseniia",
+      "email": "hahaha@mail.ru"
+    }
+  ]
+}

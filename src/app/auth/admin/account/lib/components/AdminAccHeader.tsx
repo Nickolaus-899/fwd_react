@@ -1,8 +1,11 @@
 import React, {JSX} from 'react'
 
-const AdminAccHeader: ({} : {}) => JSX.Element = ({}) => {
+const AdminAccHeader: ({name} : {name: string}) => JSX.Element = ({name}) => {
     return (
-        <div>AdminAccHeader</div>
+        <div className="AdmAccWrapper">
+            <h1>Hello, {name}!</h1>
+            <div>You can add, delete and update dishes</div>
+        </div>
     )
 }
 
