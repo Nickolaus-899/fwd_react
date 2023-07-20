@@ -10,13 +10,14 @@
           "title": "Spaghetti",
           "price": 200,
           "calories": 400,
-          "img":
+          "img": ""
         },
         {
           "id": 200,
-          "title": "Spaghetti",
+          "title": "Dumplings",
           "price": 200,
-          "calories": 400
+          "calories": 400,
+          "img": "https://www.gastronom.ru/binfiles/images/20160506/b27984f0.jpg"
         }
       ]
     },
