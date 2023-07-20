@@ -1,0 +1,10 @@
+.AdminUserChoose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdminUserChoose div {
+    margin-top: 20px;
+}

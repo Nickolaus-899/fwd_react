@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import icon from '@/app/auth/images/fork-and-knife.svg'
+import icon from '@/app/auth/user/lib/images/fork-and-knife.svg'
 function AuthMain() {
     return (
         <section className="bodyCenter">
