@@ -1,14 +1,14 @@
 import React, {JSX} from 'react'
 import Image from "next/image";
-import {AnswerShort} from "@/app/classes";
+import {Dish} from "@/app/classes";
 
-const FoodItem: ({recipe} : {recipe: AnswerShort}) => JSX.Element = ({recipe}) => {
+const FoodItem: ({recipe} : {recipe: Dish}) => JSX.Element = ({recipe}) => {
     return (
         <a href={"/dish/" + recipe.id} className="DecorLink">
             <div className="PopularItem">
-                <Image
+                <img
                     className="PopularItemImg"
-                    src={recipe.image}
+                    src={recipe.img}
                     alt={recipe.title}
                     width={200}
                     height={200}

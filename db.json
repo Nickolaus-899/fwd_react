@@ -15,7 +15,7 @@
           "title": "Spaghetti",
           "price": "400",
           "calories": "100",
-          "vegetarian": false,
+          "vegetarian": true,
           "cuisine": "Italian",
           "img": "https://img.delo-vcusa.ru/2019/11/Spagetti-Putaneska.jpg",
           "link": ""
@@ -45,7 +45,7 @@
           "title": "Salad",
           "price": "50",
           "calories": "30",
-          "vegetarian": false,
+          "vegetarian": true,
           "cuisine": "Greek",
           "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg",
           "link": ""
