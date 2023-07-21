@@ -17,7 +17,8 @@
           "calories": "100",
           "vegetarian": false,
           "cuisine": "Italian",
-          "img": "https://img.delo-vcusa.ru/2019/11/Spagetti-Putaneska.jpg"
+          "img": "https://img.delo-vcusa.ru/2019/11/Spagetti-Putaneska.jpg",
+          "link": ""
         },
         {
           "id": 200,
@@ -26,7 +27,8 @@
           "calories": 800,
           "vegetarian": false,
           "cuisine": "",
-          "img": "https://www.gastronom.ru/binfiles/images/20160506/b27984f0.jpg"
+          "img": "https://www.gastronom.ru/binfiles/images/20160506/b27984f0.jpg",
+          "link": ""
         },
         {
           "id": 1689937082,
@@ -35,7 +37,8 @@
           "calories": "500",
           "vegetarian": false,
           "cuisine": "Italian",
-          "img": "https://www.gastronom.ru/binfiles/images/20191113/bd570867.jpg"
+          "img": "https://www.gastronom.ru/binfiles/images/20191113/bd570867.jpg",
+          "link": ""
         },
         {
           "id": 1689937445,
@@ -44,7 +47,8 @@
           "calories": "30",
           "vegetarian": false,
           "cuisine": "Greek",
-          "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg"
+          "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg",
+          "link": ""
         }
       ]
     },
@@ -65,7 +69,8 @@
           "calories": 700,
           "vegetarian": false,
           "cuisine": "Russian",
-          "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg"
+          "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg",
+          "link": ""
         },
         {
           "id": 1689937217,
@@ -74,7 +79,8 @@
           "calories": "500",
           "vegetarian": false,
           "cuisine": "American",
-          "img": "https://ychef.files.bbci.co.uk/976x549/p0ctz0wr.jpg"
+          "img": "https://ychef.files.bbci.co.uk/976x549/p0ctz0wr.jpg",
+          "link": ""
         }
       ]
     }

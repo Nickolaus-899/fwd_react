@@ -60,6 +60,14 @@ const AddDishForm: ({
                     className="WhiteColorForInputText"
                 />
             </div>
+            <div className="InputCustom">
+                <div className="WhiteColorForInputText">Link to the dish:</div>
+                <input
+                    onChange={(e: { target: { value: string; }; }) => changeEventHandler(e.target.value, 'link')}
+                    placeholder="URL"
+                    className="WhiteColorForInputText"
+                />
+            </div>
             <div className="ButtonsWrapper">
                 <button className="ExtraButton" onClick={() => {createDishHandler()}}>Add</button>
                 <button className="ExtraButton" onClick={() => {closeFormHandler()}}>Cancel</button>

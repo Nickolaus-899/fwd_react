@@ -23,7 +23,8 @@ export interface Dish {
     calories: number,
     vegetarian: boolean,
     cuisine: string,
-    img: string
+    img: string,
+    link: string
 }
 
 export interface AdminInfo {
@@ -52,7 +53,8 @@ export const nullDish: Dish = {
     calories: 0,
     vegetarian: false,
     cuisine: "",
-    img: ""
+    img: "",
+    link: ""
 }
 
 export const emptyDishesArray: Dish[] = []
