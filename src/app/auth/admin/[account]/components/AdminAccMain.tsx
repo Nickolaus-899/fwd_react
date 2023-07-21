@@ -6,6 +6,7 @@ import {addDishFormType, Client, Dish, nullClient, nullDish} from "@/app/classes
 import FoodItemInList from "@/app/auth/admin/[account]/components/FoodItemInList";
 import {addDish} from "@/app/fetch";
 import GeneralForm from "@/lib/form/components/GeneralForm";
+import moment from "moment";
 
 const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
     const [client, setClient] = useState(nullClient)
@@ -40,6 +41,21 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
         }))
     }
 
+    const createDishHandler = () => {
+        setDish(prevState => ({
+            ...prevState,
+            "id": moment().unix()
+        }))
+
+        addDishHandler(dish)
+
+        setIsOpenForm(false)
+    }
+
+    const closeFormHandler = () => {
+        setDish(nullDish)
+        setIsOpenForm(false)
+    }
 
     useEffect(() => {
         fetchHandler().then(r => r)
@@ -52,6 +68,8 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         type={addDishFormType}
                         setIsOpenForm={setIsOpenForm}
                         changeEventHandler={changeEventHandler}
+                        createDishHandler={createDishHandler}
+                        closeFormHandler={closeFormHandler}
                     />
                 ) : null
             }

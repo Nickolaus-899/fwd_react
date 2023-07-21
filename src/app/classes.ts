@@ -72,3 +72,5 @@ export const emptyVarComplex: AnswerComplex = {
 
 
 export const addDishFormType: string = 'add_dish'
+
+export const nullFunction = () => {}

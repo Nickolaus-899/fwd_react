@@ -6,22 +6,32 @@ import AddDishForm from "@/lib/form/components/AddDishForm";
 const GeneralForm: ({
                         type,
                         setIsOpenForm,
-                        changeEventHandler
+                        changeEventHandler,
+                        createDishHandler,
+                        closeFormHandler
 } : {
     type: string,
     setIsOpenForm: Function,
-    changeEventHandler: Function
+    changeEventHandler: Function,
+    createDishHandler: Function,
+    closeFormHandler: Function
 }) => JSX.Element = ({
                                             type,
                                             setIsOpenForm,
-                                            changeEventHandler
+                                            changeEventHandler,
+                                            createDishHandler,
+                                            closeFormHandler
 }) => {
     return (
         <div className="FormPositionWrapper" onClick={() => setIsOpenForm(false)}>
             <div className="FormWrapper" onClick={(e: { stopPropagation: () => void; }) => e.stopPropagation()}>
                 {
                     type === addDishFormType ? (
-                        <AddDishForm changeEventHandler={changeEventHandler}/>
+                        <AddDishForm
+                            changeEventHandler={changeEventHandler}
+                            createDishHandler={createDishHandler}
+                            closeFormHandler={closeFormHandler}
+                        />
                     ) : null
                 }
             </div>

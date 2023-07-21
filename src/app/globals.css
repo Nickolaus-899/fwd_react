@@ -14,7 +14,7 @@
   max-width: 98vw !important;
 }
 
-
+/*My Button*/
 .MyButton {
   display: inline-block;
   height: 50px;
@@ -63,3 +63,27 @@
 .MyButton:hover svg {
   fill: white;
 }
+/*My Button*/
+
+/*Extra Button*/
+.ExtraButton {
+  border: 3px solid white;
+  background-color: rgb(211, 164, 123);
+  color: white;
+  margin-left: 5px;
+  border-radius: 15px;
+
+  padding: 5px;
+
+  transition: background-color 0.4s, color 0.3s ease-in;
+}
+
+.ExtraButton:hover {
+  background-color: white;
+  color: rgb(211, 164, 123);
+}
+
+.ExtraButton:active {
+  background-color: #ececec;
+}
+/*Extra Button*/
