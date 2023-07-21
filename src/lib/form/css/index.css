@@ -63,6 +63,10 @@
     margin-right: 20px;
 }
 
+.WhiteColorForInputText {
+    color: white;
+}
+
 .VeggieChooseWrapper {
     display: flex;
 }
@@ -89,6 +93,8 @@
     transition: color 0.3s ease-in;
 
     cursor: pointer;
+
+    color: black;
 
     /*margin-left: 20px;*/
 

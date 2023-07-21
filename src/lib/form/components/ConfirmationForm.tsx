@@ -6,7 +6,7 @@ const ConfirmationForm: ({closeFormHandler, deleteDishHandler}
     => JSX.Element = ({closeFormHandler, deleteDishHandler}) => {
     return (
         <div>
-            <div>Do you really want to delete this dish?</div>
+            <div className="WhiteColorForInputText">Do you really want to delete this dish?</div>
             <div className="ButtonsWrapper">
                 <button className="ExtraButton" onClick={() => {deleteDishHandler()}}>Delete</button>
                 <button className="ExtraButton" onClick={() => {closeFormHandler()}}>Cancel</button>

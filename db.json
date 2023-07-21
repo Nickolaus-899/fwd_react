@@ -11,11 +11,11 @@
       },
       "dishes": [
         {
-          "id": 100,
+          "id": 1689939466,
           "title": "Spaghetti",
-          "price": 200,
-          "calories": 400,
-          "vegetarian": true,
+          "price": "400",
+          "calories": "100",
+          "vegetarian": false,
           "cuisine": "Italian",
           "img": "https://img.delo-vcusa.ru/2019/11/Spagetti-Putaneska.jpg"
         },
