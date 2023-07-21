@@ -1,5 +1,4 @@
 "use client"
-// json-server -p 3001 --watch db.json
 import React, {JSX, useEffect, useState} from 'react'
 import {fetchAdminData} from "@/app/auth/admin/[account]/fetchAdminData";
 import {addDishFormType, Client, confirmationFormType, Dish, nullClient, nullDish, nullFunction} from "@/app/classes";

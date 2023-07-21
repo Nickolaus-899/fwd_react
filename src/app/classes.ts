@@ -1,3 +1,4 @@
+// json-server -p 3001 --watch db.json
 export const fetchURL: string = 'http://localhost:3001'
 export const additionalURLPath: string = '/clients'
 
