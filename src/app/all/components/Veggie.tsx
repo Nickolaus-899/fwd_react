@@ -1,4 +1,3 @@
-"use client"
 import React, {JSX, useEffect, useState} from 'react'
 import {API, Dish, emptyArrayShort, randomAPI} from "@/app/classes";
 import Image from "next/image";
