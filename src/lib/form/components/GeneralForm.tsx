@@ -1,8 +1,9 @@
 import React, {JSX} from 'react'
 import "./../css/index.css"
-import {addDishFormType, confirmationFormType, Dish} from "@/app/classes";
+import {addDishFormType, addToMenuFormType, confirmationFormType, Dish} from "@/app/classes";
 import AddDishForm from "@/lib/form/components/AddDishForm";
 import ConfirmationForm from "@/lib/form/components/ConfirmationForm";
+import AddToMenuForm from "@/lib/form/components/AddToMenuForm";
 
 const GeneralForm: ({
                         type,
@@ -11,7 +12,8 @@ const GeneralForm: ({
                         createDishHandler,
                         closeFormHandler,
                         deleteDishHandler,
-                        dish
+                        dish,
+                        addToMenuHandler
 } : {
     type: string,
     setIsOpenForm: Function,
@@ -19,7 +21,8 @@ const GeneralForm: ({
     createDishHandler: Function,
     closeFormHandler: Function,
     deleteDishHandler: Function,
-    dish: Dish
+    dish: Dish,
+    addToMenuHandler: Function
 }) => JSX.Element = ({
                                             type,
                                             setIsOpenForm,
@@ -27,7 +30,8 @@ const GeneralForm: ({
                                             createDishHandler,
                                             closeFormHandler,
                                             deleteDishHandler,
-                                            dish
+                                            dish,
+                                            addToMenuHandler
 }) => {
     return (
         <div className="FormPositionWrapper" onClick={() => setIsOpenForm(false)}>
@@ -47,6 +51,14 @@ const GeneralForm: ({
                         <ConfirmationForm
                             closeFormHandler={closeFormHandler}
                             deleteDishHandler={deleteDishHandler}
+                        />
+                    ) : null
+                }
+                {
+                    type === addToMenuFormType ? (
+                        <AddToMenuForm
+                            addToMenuHandler={addToMenuHandler}
+                            closeFormHandler={closeFormHandler}
                         />
                     ) : null
                 }

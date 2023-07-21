@@ -10,7 +10,7 @@ export async function fetchData(): Promise<Client[]> {
 export async function addDish(client: Client, dish: Dish): Promise<Client[]> {
     console.log("Adding dish...")
     const url = fetchURL + additionalURLPath + "/" + client.id
-    dish.id = moment().unix()
+    // dish.id = moment().unix()
     client.dishes = [...client.dishes, dish]
     const fetchInit = {
         method: 'PATCH',

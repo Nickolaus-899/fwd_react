@@ -56,6 +56,9 @@ function AllMain() {
                 }
                 usedClientNumbers = [...usedClientNumbers, clientNumber]
                 // console.log("client", clientNumber)
+                if (!clients[clientNumber].admin) {
+                    continue
+                }
                 for (let j = 0  ; j < clients[clientNumber].dishes.length; j++) {
                     let dishNumber = getRandomInt(clients[clientNumber].dishes.length)
                     // console.log("dish_init", dishNumber)

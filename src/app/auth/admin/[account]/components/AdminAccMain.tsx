@@ -65,7 +65,8 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
     const openCreationDishPageHandler = () => {
         setDish((prevState) => ({
             ...prevState,
-            cuisine: client.admin_info.cuisine
+            cuisine: client.admin_info.cuisine,
+            id: moment().unix()
         }))
         setIsOpenForm(true)
     }
@@ -89,6 +90,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         closeFormHandler={closeFormHandler}
                         deleteDishHandler={nullFunction}
                         dish={dish}
+                        addToMenuHandler={nullFunction}
                     />
                 ) : null
             }
@@ -102,6 +104,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         closeFormHandler={closeConfirmPage}
                         deleteDishHandler={deleteDishHandler}
                         dish={nullDish}
+                        addToMenuHandler={nullFunction}
                     />
                 ) : null
             }

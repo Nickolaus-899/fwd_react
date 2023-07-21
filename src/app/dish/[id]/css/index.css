@@ -51,6 +51,19 @@
     margin-top: 10px;
 }
 
+.ButtonsInDishPosition {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.ButtonsInDishPosition button {
+    margin-top: 3vh;
+}
+
 .ItemInDetail {
     margin-right: 5px;
 }

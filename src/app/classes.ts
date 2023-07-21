@@ -58,5 +58,6 @@ export const nullClient: Client = {
 
 export const addDishFormType: string = 'add_dish'
 export const confirmationFormType: string = 'confirm'
+export const addToMenuFormType: string = 'add_to_menu'
 
 export const nullFunction = () => {}

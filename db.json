@@ -83,6 +83,13 @@
           "link": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "name": "SomeUser",
+      "email": "user@mail.ru",
+      "admin": false,
+      "dishes": []
     }
   ]
 }

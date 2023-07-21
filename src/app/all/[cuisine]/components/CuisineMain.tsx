@@ -18,6 +18,9 @@ function CuisineMain({params} : {params : {cuisine: string}}) {
                 if (applyBreak) {
                     break
                 }
+                if (!clients[i].admin) {
+                    continue
+                }
                 for (let j = 0; j < clients[i].dishes.length; j++) {
                     if (cuisineCounter === CUISINE_NUMBER) {
                         applyBreak = true
