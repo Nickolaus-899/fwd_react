@@ -41,3 +41,33 @@ export async function deleteDish(client: Client, dish: Dish): Promise<Client[]> 
     const res = await fetch(url, fetchInit)
     return res.json()
 }
+
+export async function addClient(client: Client) {
+    console.log("Adding new client...")
+    const url = fetchURL + additionalURLPath
+    client.id = moment().unix()
+    const fetchInit = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(client)
+    }
+
+    const res = await fetch(url, fetchInit)
+    return res.json()
+}
+
+export async function removeClient(client: Client) {
+    console.log("Removing client...")
+    const url = fetchURL + additionalURLPath + "/" + client.id
+    const fetchInit = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    const res = await fetch(url, fetchInit)
+    return res.json()
+}
