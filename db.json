@@ -71,16 +71,6 @@
           "cuisine": "Russian",
           "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg",
           "link": ""
-        },
-        {
-          "id": 1689937217,
-          "title": "Hawaian Pizza",
-          "price": "400",
-          "calories": "500",
-          "vegetarian": false,
-          "cuisine": "American",
-          "img": "https://ychef.files.bbci.co.uk/976x549/p0ctz0wr.jpg",
-          "link": ""
         }
       ]
     },
@@ -89,7 +79,28 @@
       "name": "SomeUser",
       "email": "user@mail.ru",
       "admin": false,
-      "dishes": []
+      "dishes": [
+        {
+          "id": 1689937445,
+          "title": "Salad",
+          "price": "50",
+          "calories": "30",
+          "vegetarian": true,
+          "cuisine": "Greek",
+          "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg",
+          "link": ""
+        },
+        {
+          "id": 1689937082,
+          "title": "Pizza",
+          "price": "400",
+          "calories": "500",
+          "vegetarian": false,
+          "cuisine": "Italian",
+          "img": "https://www.gastronom.ru/binfiles/images/20191113/bd570867.jpg",
+          "link": ""
+        }
+      ]
     }
   ],
   "tokens": []
