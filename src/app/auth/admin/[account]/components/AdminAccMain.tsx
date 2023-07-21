@@ -64,12 +64,6 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
 
     const deleteDishHandler = () => {
         deleteDish(client, dish)
-            .then(() => {
-                setClient(prevState => ({
-                    ...prevState,
-                    "dishes": prevState.dishes.filter(dishElement => dishElement.id !== dish.id)
-                }))
-            })
 
         setConfirmForm(false)
     }

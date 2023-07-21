@@ -23,28 +23,20 @@
           "img": "https://www.gastronom.ru/binfiles/images/20160506/b27984f0.jpg"
         },
         {
-          "id": 0,
+          "id": 1689937082,
           "title": "Pizza",
-          "price": "500",
-          "calories": "300",
+          "price": "400",
+          "calories": "500",
           "vegetarian": false,
-          "img": "https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*"
+          "img": "https://www.gastronom.ru/binfiles/images/20191113/bd570867.jpg"
         },
         {
-          "id": 0,
+          "id": 1689937445,
           "title": "Salad",
           "price": "50",
           "calories": "30",
-          "vegetarian": true,
-          "img": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-001_1.jpg"
-        },
-        {
-          "id": 0,
-          "title": "dish",
-          "price": 0,
-          "calories": 0,
           "vegetarian": false,
-          "img": ""
+          "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg"
         }
       ]
     },
@@ -61,6 +53,14 @@
           "calories": 700,
           "vegetarian": false,
           "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg"
+        },
+        {
+          "id": 1689937217,
+          "title": "Hawaian Pizza",
+          "price": "400",
+          "calories": "500",
+          "vegetarian": false,
+          "img": "https://ychef.files.bbci.co.uk/976x549/p0ctz0wr.jpg"
         }
       ]
     }
