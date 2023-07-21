@@ -5,6 +5,19 @@
     align-items: center;
 }
 
+.HeaderFrom {
+    margin-top: -4vh;
+}
+
+.HeaderCuisine {
+    margin-top: 3vh;
+}
+
+.ButtonAddDishPosition {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
 .FoodItemInList {
     display: flex;
 }
@@ -12,7 +25,7 @@
 .FoodItemInListPosition {
     /*flex-direction: column;*/
     border: 0.5vw solid black;
-    width: 55vw;
+    width: 65vw;
 
     margin-top: 20px;
 
@@ -24,9 +37,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
-    margin-left: 2vw;
+    margin-left: 6vw;
 }
 
 .FoodItemInListInfo h1 {

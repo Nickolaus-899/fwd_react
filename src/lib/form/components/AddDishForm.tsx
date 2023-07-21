@@ -1,18 +1,22 @@
 import React, {JSX} from 'react'
 import VeggieChoose from "@/lib/form/components/veggie/VeggieChoose";
+import {Dish} from "@/app/classes";
 
 const AddDishForm: ({
                         changeEventHandler,
                         createDishHandler,
-                        closeFormHandler
+                        closeFormHandler,
+                        dish
 } : {
     changeEventHandler: Function,
     createDishHandler: Function,
-    closeFormHandler: Function
+    closeFormHandler: Function,
+    dish: Dish
 }) => JSX.Element = ({
                                             changeEventHandler,
                                             createDishHandler,
-                                            closeFormHandler
+                                            closeFormHandler,
+                                            dish
 }) => {
     return (
         <div>
@@ -47,6 +51,7 @@ const AddDishForm: ({
             <div className="InputCustom">
                 <div className="WhiteColorForInputText">Cuisine:</div>
                 <input
+                    value={dish.cuisine}
                     onChange={(e: { target: { value: string; }; }) => changeEventHandler(e.target.value, 'cuisine')}
                     placeholder="Cuisine"
                     className="WhiteColorForInputText"

@@ -43,11 +43,6 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
     }
 
     const createDishHandler = () => {
-        setDish(prevState => ({
-            ...prevState,
-            "id": moment().unix()
-        }))
-
         addDishHandler(dish)
 
         setIsOpenForm(false)
@@ -68,6 +63,13 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
         setConfirmForm(false)
     }
 
+    const openCreationDishPageHandler = () => {
+        setDish((prevState) => ({
+            ...prevState,
+            cuisine: client.admin_info.cuisine
+        }))
+        setIsOpenForm(true)
+    }
     const openConfirmPageHandler = (selectedDish: Dish) => {
         setConfirmForm(true)
         setDish(selectedDish)
@@ -87,6 +89,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         createDishHandler={createDishHandler}
                         closeFormHandler={closeFormHandler}
                         deleteDishHandler={nullFunction}
+                        dish={dish}
                     />
                 ) : null
             }
@@ -99,12 +102,13 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         createDishHandler={nullFunction}
                         closeFormHandler={closeConfirmPage}
                         deleteDishHandler={deleteDishHandler}
+                        dish={nullDish}
                     />
                 ) : null
             }
             <div className="AdmAccWrapper">
                 {/*<button className="MyButton" onClick={fetchHandler}>Click Me!</button>*/}
-                <button className="MyButton" onClick={() => setIsOpenForm(true)}>Add Dish</button>
+                <button className="MyButton ButtonAddDishPosition" onClick={() => openCreationDishPageHandler()}>Add Dish</button>
                 {
                     client.dishes.map(dish => (
                         <FoodItemInList

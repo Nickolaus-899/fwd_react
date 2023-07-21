@@ -1,6 +1,6 @@
 import React, {JSX} from 'react'
 import "./../css/index.css"
-import {addDishFormType, confirmationFormType} from "@/app/classes";
+import {addDishFormType, confirmationFormType, Dish} from "@/app/classes";
 import AddDishForm from "@/lib/form/components/AddDishForm";
 import ConfirmationForm from "@/lib/form/components/ConfirmationForm";
 
@@ -10,21 +10,24 @@ const GeneralForm: ({
                         changeEventHandler,
                         createDishHandler,
                         closeFormHandler,
-                        deleteDishHandler
+                        deleteDishHandler,
+                        dish
 } : {
     type: string,
     setIsOpenForm: Function,
     changeEventHandler: Function,
     createDishHandler: Function,
     closeFormHandler: Function,
-    deleteDishHandler: Function
+    deleteDishHandler: Function,
+    dish: Dish
 }) => JSX.Element = ({
                                             type,
                                             setIsOpenForm,
                                             changeEventHandler,
                                             createDishHandler,
                                             closeFormHandler,
-                                            deleteDishHandler
+                                            deleteDishHandler,
+                                            dish
 }) => {
     return (
         <div className="FormPositionWrapper" onClick={() => setIsOpenForm(false)}>
@@ -35,6 +38,7 @@ const GeneralForm: ({
                             changeEventHandler={changeEventHandler}
                             createDishHandler={createDishHandler}
                             closeFormHandler={closeFormHandler}
+                            dish={dish}
                         />
                     ) : null
                 }
