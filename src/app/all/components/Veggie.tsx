@@ -1,4 +1,4 @@
-import React, {JSX, useEffect, useState} from 'react'
+import React, {JSX} from 'react'
 import {API, Dish, emptyArrayShort, randomAPI} from "@/app/classes";
 import Image from "next/image";
 import FoodItem from "@/app/all/components/FoodItem";
