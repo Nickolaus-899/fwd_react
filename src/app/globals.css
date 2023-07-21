@@ -87,3 +87,35 @@
   background-color: #ececec;
 }
 /*Extra Button*/
+
+/*Cross Circle Button*/
+.CrossCircleButton {
+  border-radius: 50%;
+  height: 2.5vw;
+  width: 2.5vw;
+
+  font-size: 1.5vw;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 0.35vw;
+
+  border: 2px solid black;
+
+  transition: color 0.3s ease-in, background-color 0.3s ease-in, border 0.3s ease-in;
+}
+
+.CrossCircleButton:hover {
+  background-color: crimson;
+  color: white;
+  border: 2px solid crimson;
+}
+
+.CrossCircleButton:active {
+  background-color: darkred;
+  border: 2px solid darkred;
+}
+/*Cross Circle Button*/

@@ -37,6 +37,14 @@
           "calories": "30",
           "vegetarian": true,
           "img": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-001_1.jpg"
+        },
+        {
+          "id": 0,
+          "title": "dish",
+          "price": 0,
+          "calories": 0,
+          "vegetarian": false,
+          "img": ""
         }
       ]
     },

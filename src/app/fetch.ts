@@ -2,15 +2,16 @@
 
 import {additionalURLPath, Client, Dish, fetchURL} from "@/app/classes";
 
-export async function fetchData() {
+export async function fetchData(): Promise<Client[]> {
     console.log("Fetching data...")
     const data = await fetch(`${fetchURL}${additionalURLPath}`)
     return data.json()
 }
 
-export async function addDish(client: Client, dish: Dish) {
+export async function addDish(client: Client, dish: Dish): Promise<Client[]> {
+    console.log("Adding dish...")
     const url = fetchURL + additionalURLPath + "/" + client.id
-
+    // dish.id = moment().unix()
     client.dishes = [...client.dishes, dish]
     const fetchInit = {
         method: 'PATCH',
@@ -20,6 +21,21 @@ export async function addDish(client: Client, dish: Dish) {
         body: JSON.stringify(client)
     }
 
+    const res = await fetch(url, fetchInit)
+    return res.json()
+}
+
+export async function deleteDish(client: Client, dish: Dish): Promise<Client[]> {
+    console.log("Removing dish...")
+    console.log(dish)
+    const url = `${fetchURL}${additionalURLPath}/${client.id}/dishes/${dish.id}`
+
+    const fetchInit = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
     const res = await fetch(url, fetchInit)
     return res.json()
 }

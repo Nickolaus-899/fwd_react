@@ -1,26 +1,30 @@
 import React, {JSX} from 'react'
 import "./../css/index.css"
-import {addDishFormType} from "@/app/classes";
+import {addDishFormType, confirmationFormType} from "@/app/classes";
 import AddDishForm from "@/lib/form/components/AddDishForm";
+import ConfirmationForm from "@/lib/form/components/ConfirmationForm";
 
 const GeneralForm: ({
                         type,
                         setIsOpenForm,
                         changeEventHandler,
                         createDishHandler,
-                        closeFormHandler
+                        closeFormHandler,
+                        deleteDishHandler
 } : {
     type: string,
     setIsOpenForm: Function,
     changeEventHandler: Function,
     createDishHandler: Function,
-    closeFormHandler: Function
+    closeFormHandler: Function,
+    deleteDishHandler: Function
 }) => JSX.Element = ({
                                             type,
                                             setIsOpenForm,
                                             changeEventHandler,
                                             createDishHandler,
-                                            closeFormHandler
+                                            closeFormHandler,
+                                            deleteDishHandler
 }) => {
     return (
         <div className="FormPositionWrapper" onClick={() => setIsOpenForm(false)}>
@@ -31,6 +35,14 @@ const GeneralForm: ({
                             changeEventHandler={changeEventHandler}
                             createDishHandler={createDishHandler}
                             closeFormHandler={closeFormHandler}
+                        />
+                    ) : null
+                }
+                {
+                    type === confirmationFormType ? (
+                        <ConfirmationForm
+                            closeFormHandler={closeFormHandler}
+                            deleteDishHandler={deleteDishHandler}
                         />
                     ) : null
                 }

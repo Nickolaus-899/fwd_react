@@ -2,9 +2,9 @@
 // json-server -p 3001 --watch db.json
 import React, {JSX, useEffect, useState} from 'react'
 import {fetchAdminData} from "@/app/auth/admin/[account]/fetchAdminData";
-import {addDishFormType, Client, Dish, nullClient, nullDish} from "@/app/classes";
+import {addDishFormType, Client, confirmationFormType, Dish, nullClient, nullDish, nullFunction} from "@/app/classes";
 import FoodItemInList from "@/app/auth/admin/[account]/components/FoodItemInList";
-import {addDish} from "@/app/fetch";
+import {addDish, deleteDish} from "@/app/fetch";
 import GeneralForm from "@/lib/form/components/GeneralForm";
 import moment from "moment";
 
@@ -13,6 +13,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
     const [dish, setDish] = useState(nullDish)
 
     const [isOpenForm, setIsOpenForm] = useState(false)
+    const [isConfirmForm, setConfirmForm] = useState(false)
 
     function findClient(clients: Client[]) {
         for (let i = 0; i < clients.length; i++) {
@@ -57,6 +58,27 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
         setIsOpenForm(false)
     }
 
+    const closeConfirmPage = () => {
+        setConfirmForm(false)
+    }
+
+    const deleteDishHandler = () => {
+        deleteDish(client, dish)
+            .then(() => {
+                setClient(prevState => ({
+                    ...prevState,
+                    "dishes": prevState.dishes.filter(dishElement => dishElement.id !== dish.id)
+                }))
+            })
+
+        setConfirmForm(false)
+    }
+
+    const openConfirmPageHandler = (selectedDish: Dish) => {
+        setConfirmForm(true)
+        setDish(selectedDish)
+    }
+
     useEffect(() => {
         fetchHandler().then(r => r)
     }, [name])
@@ -70,6 +92,19 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         changeEventHandler={changeEventHandler}
                         createDishHandler={createDishHandler}
                         closeFormHandler={closeFormHandler}
+                        deleteDishHandler={nullFunction}
+                    />
+                ) : null
+            }
+            {
+                isConfirmForm ? (
+                    <GeneralForm
+                        type={confirmationFormType}
+                        setIsOpenForm={setConfirmForm}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeConfirmPage}
+                        deleteDishHandler={deleteDishHandler}
                     />
                 ) : null
             }
@@ -78,7 +113,11 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                 <button className="MyButton" onClick={() => setIsOpenForm(true)}>Add Dish</button>
                 {
                     client.dishes.map(dish => (
-                        <FoodItemInList dish={dish} key={dish.id}/>
+                        <FoodItemInList
+                            dish={dish}
+                            openConfirmPageHandler={openConfirmPageHandler}
+                            key={dish.id}
+                        />
                     ))
                 }
             </div>

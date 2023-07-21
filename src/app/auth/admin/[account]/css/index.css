@@ -6,17 +6,18 @@
 }
 
 .FoodItemInList {
-    margin-top: 20px;
-    border: 0.5vw solid black;
-    padding: 3vw;
-    border-radius: 5vw;
-
     display: flex;
 }
 
 .FoodItemInListPosition {
     /*flex-direction: column;*/
+    border: 0.5vw solid black;
     width: 55vw;
+
+    margin-top: 20px;
+
+    padding: 3vw;
+    border-radius: 5vw;
 }
 
 .FoodItemInListInfo {
@@ -46,4 +47,11 @@
 .VeggieText {
     color: green;
     font-weight: 700;
+}
+
+.CircleButtonPosition {
+    /*position: absolute;*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
