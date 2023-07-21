@@ -1,6 +1,5 @@
 import React, {JSX} from 'react'
-import {API, Dish, emptyArrayShort, randomAPI} from "@/app/classes";
-import Image from "next/image";
+import {Dish} from "@/app/classes";
 import FoodItem from "@/app/all/components/FoodItem";
 
 const Veggie: ({veggie} : {veggie: Dish[]}) => JSX.Element = ({veggie}) => {

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['spoonacular.com'],
+        domains: [''],
         formats: ['image/avif', "image/webp"]
     }
 }

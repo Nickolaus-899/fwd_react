@@ -1,8 +1,6 @@
 import React, {JSX} from 'react'
-import {API, Dish, emptyArrayShort, emptyClientsArray, emptyDishesArray, nullClient, randomAPI} from "@/app/classes";
-import Image from "next/image";
+import {Dish} from "@/app/classes";
 import FoodItem from "@/app/all/components/FoodItem";
-import {fetchData} from "@/app/fetch";
 
 const Popular: ({popular} : {popular: Dish[]}) => JSX.Element = ({popular}) => {
 
