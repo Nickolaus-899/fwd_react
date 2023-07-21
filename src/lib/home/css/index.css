@@ -11,7 +11,7 @@
     /*width: 280px;*/
     /*height: 280px;*/
     width: 70vh;
-    height: 70vh;
+    height: 100%;
 
     max-width: 75vw;
     max-height: 75vw;
@@ -40,8 +40,10 @@
         /*width: 280px;*/
         /*height: 280px;*/
         width: 35vw;
-        height: 35vw;
+        height: 100%;
         border-radius: 2rem;
+
+        margin-top: 5vh;
     }
 
     .TitleText {
