@@ -19,6 +19,12 @@ const FoodItemInList: ({dish, openConfirmPageHandler} :
                     <div>price: {dish.price}</div>
                     <div>calories: {dish.calories}</div>
                     {
+                        dish.cuisine !== "" ? (
+                            <div>cuisine: {dish.cuisine}</div>
+                        ) : null
+                    }
+
+                    {
                         dish.vegetarian ? (
                             <div className="VeggieText">Vegetarian!</div>
                         ) : null

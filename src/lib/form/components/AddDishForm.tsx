@@ -42,6 +42,13 @@ const AddDishForm: ({
                 <VeggieChoose changeEventHandler={changeEventHandler}/>
             </div>
             <div className="InputCustom">
+                <div>Cuisine:</div>
+                <input
+                    onChange={(e: { target: { value: string; }; }) => changeEventHandler(e.target.value, 'cuisine')}
+                    placeholder="Cuisine"
+                />
+            </div>
+            <div className="InputCustom">
                 <div>Link to image:</div>
                 <input
                     onChange={(e: { target: { value: string; }; }) => changeEventHandler(e.target.value, 'img')}

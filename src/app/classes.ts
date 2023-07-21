@@ -22,15 +22,26 @@ export interface Dish {
     price: number,
     calories: number,
     vegetarian: boolean,
+    cuisine: string,
     img: string
 }
 
+export interface AdminInfo {
+    restaurant: string,
+    cuisine: string
+}
+
+export const nullAdminInfo: AdminInfo = {
+    restaurant: "",
+    cuisine: ""
+}
 
 export interface Client {
     id: number,
     name: string,
     email: string,
     admin: boolean,
+    admin_info: AdminInfo,
     dishes: Dish[]
 }
 
@@ -40,6 +51,7 @@ export const nullDish: Dish = {
     price: 0,
     calories: 0,
     vegetarian: false,
+    cuisine: "",
     img: ""
 }
 
@@ -51,6 +63,7 @@ export const nullClient: Client = {
     name: "client",
     email: "",
     admin: false,
+    admin_info: nullAdminInfo,
     dishes: emptyDishesArray
 }
 

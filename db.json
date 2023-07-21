@@ -5,6 +5,10 @@
       "name": "Nickolaus",
       "email": "hohoho@mail.ru",
       "admin": true,
+      "admin_info": {
+        "restaurant": "IKEA",
+        "cuisine": ""
+      },
       "dishes": [
         {
           "id": 100,
@@ -12,6 +16,7 @@
           "price": 200,
           "calories": 400,
           "vegetarian": true,
+          "cuisine": "Italian",
           "img": "https://img.delo-vcusa.ru/2019/11/Spagetti-Putaneska.jpg"
         },
         {
@@ -20,6 +25,7 @@
           "price": 500,
           "calories": 800,
           "vegetarian": false,
+          "cuisine": "",
           "img": "https://www.gastronom.ru/binfiles/images/20160506/b27984f0.jpg"
         },
         {
@@ -28,6 +34,7 @@
           "price": "400",
           "calories": "500",
           "vegetarian": false,
+          "cuisine": "Italian",
           "img": "https://www.gastronom.ru/binfiles/images/20191113/bd570867.jpg"
         },
         {
@@ -36,6 +43,7 @@
           "price": "50",
           "calories": "30",
           "vegetarian": false,
+          "cuisine": "Greek",
           "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg"
         }
       ]
@@ -45,6 +53,10 @@
       "name": "Kseniia",
       "email": "hahaha@mail.ru",
       "admin": true,
+      "admin_info": {
+        "restaurant": "Haha",
+        "cuisine": "Italian"
+      },
       "dishes": [
         {
           "id": 300,
@@ -52,6 +64,7 @@
           "price": 350,
           "calories": 700,
           "vegetarian": false,
+          "cuisine": "Russian",
           "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg"
         },
         {
@@ -60,6 +73,7 @@
           "price": "400",
           "calories": "500",
           "vegetarian": false,
+          "cuisine": "American",
           "img": "https://ychef.files.bbci.co.uk/976x549/p0ctz0wr.jpg"
         }
       ]
