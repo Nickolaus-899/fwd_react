@@ -30,7 +30,7 @@ function MyMain() {
                     {/*}*/}
                     <div className="dish1 row">
                         <div className="col-md-3">
-                            <Image className='svg' width={140} height={82.5} src={myArray.} alt={"food"}/>
+                            <Image className='svg' width={140} height={82.5} src={dish1} alt={"food"}/>
                         </div>
                         <div className="col-md-6">
                             <h2 className="dish_header"> Dish1 </h2>
