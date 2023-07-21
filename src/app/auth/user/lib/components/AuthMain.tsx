@@ -21,7 +21,7 @@ function AuthMain() {
                         </div>
                         <div className="submit-buttons">
                             <button className="login-screen-button" type="submit">Log in</button>
-                            <a className="login-screen-left block-display" href="">Create an account</a>
+                            <a className="login-screen-left block-display" href="/auth/user/registration">Create an account</a>
                             <a className="login-screen-right block-display" href="">Forgot password?</a>
                         </div>
                     </form>
