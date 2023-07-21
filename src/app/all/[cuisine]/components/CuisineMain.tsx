@@ -1,23 +1,40 @@
 "use client"
 import React, {useEffect, useState} from 'react'
-import {API, complexAPI, emptyArrayShort} from "@/app/classes";
+import {API, complexAPI, emptyArrayShort, emptyDishesArray} from "@/app/classes";
 import Image from "next/image";
 import FoodItem from "@/app/all/components/FoodItem";
+import {fetchData} from "@/app/fetch";
+
+const CUISINE_NUMBER: number = 12
 
 function CuisineMain({params} : {params : {cuisine: string}}) {
-    const [cuisine, setCuisine] = useState(emptyArrayShort);
+    const [cuisine, setCuisine] = useState(emptyDishesArray);
 
     const getCuisine = async (name: string) => {
-        const data = await fetch(
-            `${API}${complexAPI}?apiKey=${process.env.NEXT_PUBLIC_API_KEY}&cuisine=${name}&number=8`
-        );
-        const recipes = await data.json();
-
-        setCuisine(recipes.results);
+        let cuisineCounter: number = 0
+        fetchData().then(clients => {
+            let applyBreak = false
+            for (let i = 0; i < clients.length; i++) {
+                if (applyBreak) {
+                    break
+                }
+                for (let j = 0; j < clients[i].dishes.length; j++) {
+                    if (cuisineCounter === CUISINE_NUMBER) {
+                        applyBreak = true
+                        break
+                    }
+                    if (clients[i].dishes[j].cuisine === params.cuisine) {
+                        setCuisine(prevState => [...prevState, clients[i].dishes[j]])
+                        cuisineCounter = cuisineCounter + 1
+                    }
+                }
+            }
+        })
     };
 
 
     useEffect(() => {
+        setCuisine(emptyDishesArray)
         getCuisine(params.cuisine);
     }, [params.cuisine]);
     return (
