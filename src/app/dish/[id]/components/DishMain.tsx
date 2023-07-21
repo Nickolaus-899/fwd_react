@@ -70,7 +70,7 @@ function DishMain({params} : {params : {id: string}}) {
                         ) : null
                     }
                     <div className="SingleDetailWrapper">
-                        <a href={details.link}>
+                        <a href={details.link} target="_blank">
                             <MyButton/>
                         </a>
                     </div>

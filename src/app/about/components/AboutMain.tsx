@@ -80,7 +80,7 @@ function AboutMain() {
                     <div className="PartnersList">
                         {
                             PartnersTitles.map((partner, i) => (
-                                <a href={partner.url} key={i}>{partner.name}</a>
+                                <a href={partner.url} target="_blank" key={i}>{partner.name}</a>
                             ))
                         }
                     </div>
