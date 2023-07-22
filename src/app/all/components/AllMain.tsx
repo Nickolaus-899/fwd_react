@@ -5,7 +5,7 @@ import Veggie from "@/app/all/components/Veggie";
 import {Client, Dish, emptyDishesArray} from "@/app/classes";
 import {fetchData} from "@/app/fetch";
 
-const NUMBER_OF_POPULAR: number = 4
+const NUMBER_OF_POPULAR: number = 8
 const NUMBER_OF_VEGGIE: number = 8
 
 function AllMain() {

@@ -75,87 +75,15 @@
       ]
     },
     {
-      "id": 3,
-      "token": "Haha",
-      "email": "user@mail.ru",
-      "admin": false,
-      "dishes": [
-        {
-          "id": 1689937445,
-          "title": "Salad",
-          "price": "50",
-          "calories": "30",
-          "vegetarian": true,
-          "cuisine": "Greek",
-          "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg",
-          "link": ""
-        },
-        {
-          "id": 1689937082,
-          "title": "Pizza",
-          "price": "400",
-          "calories": "500",
-          "vegetarian": false,
-          "cuisine": "Italian",
-          "img": "https://www.gastronom.ru/binfiles/images/20191113/bd570867.jpg",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "token": "BFD4DED8D3",
-      "admin": false,
-      "admin_info": {
-        "restaurant": "",
-        "cuisine": ""
-      },
-      "dishes": [
-        {
-          "id": 300,
-          "title": "Borsch",
-          "price": 350,
-          "calories": 700,
-          "vegetarian": false,
-          "cuisine": "Russian",
-          "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg",
-          "link": ""
-        }
-      ],
-      "email": "check@check.com",
-      "id": 1690021685
-    },
-    {
-      "token": "",
+      "token": "B9D8CDD3",
       "admin": false,
       "admin_info": {
         "restaurant": "",
         "cuisine": ""
       },
       "dishes": [],
-      "email": "",
-      "id": 1690030175
-    },
-    {
-      "token": "B9D8CDD3DC",
-      "admin": false,
-      "admin_info": {
-        "restaurant": "",
-        "cuisine": ""
-      },
-      "dishes": [
-        {
-          "id": 1689937082,
-          "title": "Pizza",
-          "price": "400",
-          "calories": "500",
-          "vegetarian": false,
-          "cuisine": "Italian",
-          "img": "https://www.gastronom.ru/binfiles/images/20191113/bd570867.jpg",
-          "link": ""
-        }
-      ],
-      "email": "email",
-      "id": 1690030226
+      "email": "haha@haha",
+      "id": 1690033113
     }
   ]
 }

@@ -14,7 +14,10 @@ const AddToMenuForm: ({
         <div>
             <div className="WhiteColorForInputText">Do you really want to add this dish to your menu?</div>
             <div className="ButtonsWrapper">
-                <button className="ExtraButton" onClick={() => {addToMenuHandler()}}>Add</button>
+                <a href="/all">
+                    <button className="ExtraButton" onClick={() => {addToMenuHandler()}}>Add</button>
+                </a>
+
                 <button className="ExtraButton" onClick={() => {closeFormHandler()}}>Cancel</button>
             </div>
         </div>

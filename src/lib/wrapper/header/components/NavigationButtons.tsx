@@ -1,5 +1,5 @@
 "use client"
-import React, {JSX} from 'react'
+import React, {JSX, useEffect, useState} from 'react'
 import '@/lib/wrapper/css/position.css'
 import '@/lib/wrapper/css/bootstrap.min.css'
 
@@ -18,14 +18,17 @@ const NavigationButtons: ({
 }) => JSX.Element = ({
 
 }) => {
-    let link: string
-    const check = localStorage.getItem("userInfo")
-    if (check) {
-        const userInfo: UserTokenInfo = JSON.parse(localStorage.getItem("userInfo") as string)
-        link = `/auth/${userInfo.admin ? "admin" : "user"}/${userInfo.token}`
-    } else {
-        link = "/auth"
-    }
+    const [link, setLink] = useState("/auth")
+
+    useEffect(() => {
+        const check = localStorage.getItem("userInfo")
+        if (check) {
+            const userInfo: UserTokenInfo = JSON.parse(localStorage.getItem("userInfo") as string)
+            setLink(`/auth/${userInfo.admin ? "admin" : "user"}/${userInfo.token}`)
+        } else {
+            setLink("/auth")
+        }
+    }, [])
 
     return (
         <>

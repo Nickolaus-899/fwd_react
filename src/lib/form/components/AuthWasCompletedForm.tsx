@@ -16,7 +16,7 @@ const AuthWasCompletedForm: ({closeFormHandler}
 
     return (
         <div>
-            <div className="WhiteColorForInputText">Success!</div>
+            <div className="WhiteColorForInputText CompletedPosition">Success!</div>
             <div className="ButtonsWrapper">
                 <a href={link}>
                     <button className="ExtraButton" onClick={() => {closeFormHandler()}}>Go to account</button>

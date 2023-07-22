@@ -58,7 +58,7 @@ function MyMain() {
     //     myArray = [...myArray, dish]
     // }
 
-    async function loadDishes() {
+    async function loadData() {
         setMyArray(emptyDishesArray)
         setTotalPrice(0)
         setTotalCalories(0)
@@ -67,20 +67,26 @@ function MyMain() {
         if (check) {
             let token: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
             await loadClient(token.token)
-
-            for (let i = 0; i < client.dishes.length; i++) {
-                setMyArray(prevState => [...prevState, client.dishes[i]])
-                setTotalCalories(prevState => prevState + client.dishes[i].calories)
-                setTotalPrice(prevState => prevState + client.dishes[i].price)
-            }
         } else {
             setOpenAuthWasNotDoneForm(true)
         }
     }
 
+    function loadDishes() {
+        for (let i = 0; i < client.dishes.length; i++) {
+            setMyArray(prevState => [...prevState, client.dishes[i]])
+            setTotalCalories(prevState => prevState + client.dishes[i].calories)
+            setTotalPrice(prevState => prevState + client.dishes[i].price)
+        }
+    }
+
+    useEffect(() => {
+        loadData()
+    }, [])
+
     useEffect(() => {
         loadDishes()
-    }, [])
+    }, [client])
 
     return (
         <>

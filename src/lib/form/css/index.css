@@ -123,3 +123,9 @@
 .ButtonsWrapper button {
     margin-left: 25px;
 }
+
+.CompletedPosition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
