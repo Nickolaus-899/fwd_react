@@ -59,10 +59,6 @@ function MyMain() {
     // }
 
     async function loadData() {
-        setMyArray(emptyDishesArray)
-        setTotalPrice(0)
-        setTotalCalories(0)
-
         let check = localStorage.getItem(userInfoKey)
         if (check) {
             let token: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
@@ -73,10 +69,14 @@ function MyMain() {
     }
 
     function loadDishes() {
+        setMyArray(emptyDishesArray)
+        setTotalPrice(0)
+        setTotalCalories(0)
+
         for (let i = 0; i < client.dishes.length; i++) {
             setMyArray(prevState => [...prevState, client.dishes[i]])
-            setTotalCalories(prevState => prevState + client.dishes[i].calories)
-            setTotalPrice(prevState => prevState + client.dishes[i].price)
+            setTotalCalories(prevState => prevState + parseInt(client.dishes[i].calories.toString()))
+            setTotalPrice(prevState => prevState + parseInt(client.dishes[i].price.toString()))
         }
     }
 

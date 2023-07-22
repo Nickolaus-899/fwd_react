@@ -81,7 +81,28 @@
         "restaurant": "",
         "cuisine": ""
       },
-      "dishes": [],
+      "dishes": [
+        {
+          "id": 300,
+          "title": "Borsch",
+          "price": 350,
+          "calories": 700,
+          "vegetarian": false,
+          "cuisine": "Russian",
+          "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg",
+          "link": ""
+        },
+        {
+          "id": 1689937445,
+          "title": "Salad",
+          "price": "50",
+          "calories": "30",
+          "vegetarian": true,
+          "cuisine": "Greek",
+          "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg",
+          "link": ""
+        }
+      ],
       "email": "haha@haha",
       "id": 1690033113
     }
