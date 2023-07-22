@@ -6,9 +6,6 @@ import AuthMain from "@/app/auth/user/lib/components/AuthMain";
 function Page() {
     return (
         <>
-            <a href="/auth/user/Haha">
-                Link to Haha Account
-            </a>
             <AuthMain/>
         </>
     )
