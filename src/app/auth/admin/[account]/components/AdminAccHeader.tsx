@@ -9,7 +9,7 @@ const AdminAccHeader: ({name} : {name: string}) => JSX.Element = ({name}) => {
     async function fetchHandler() {
         await fetchAdminData().then(clients => {
             for (let i = 0; i < clients.length; i++) {
-                if (clients[i].name === name) {
+                if (clients[i].token === name) {
                     setClient(clients[i])
                 }
             }

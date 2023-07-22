@@ -123,6 +123,39 @@
       ],
       "email": "check@check.com",
       "id": 1690021685
+    },
+    {
+      "token": "",
+      "admin": false,
+      "admin_info": {
+        "restaurant": "",
+        "cuisine": ""
+      },
+      "dishes": [],
+      "email": "",
+      "id": 1690030175
+    },
+    {
+      "token": "B9D8CDD3DC",
+      "admin": false,
+      "admin_info": {
+        "restaurant": "",
+        "cuisine": ""
+      },
+      "dishes": [
+        {
+          "id": 1689937082,
+          "title": "Pizza",
+          "price": "400",
+          "calories": "500",
+          "vegetarian": false,
+          "cuisine": "Italian",
+          "img": "https://www.gastronom.ru/binfiles/images/20191113/bd570867.jpg",
+          "link": ""
+        }
+      ],
+      "email": "email",
+      "id": 1690030226
     }
   ]
 }

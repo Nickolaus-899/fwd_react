@@ -9,7 +9,7 @@ const AuthWasCompletedForm: ({closeFormHandler}
     let link: string = '/auth'
     if (check) {
         let userToken: UserTokenInfo = JSON.parse(localStorage.getItem("userInfo") as string)
-        link = `/auth/${userToken.admin ? "admin" : "user"}/${userToken.name}`
+        link = `/auth/${userToken.admin ? "admin" : "user"}/${userToken.token}`
     } else {
         console.log("No info in local storage")
     }
