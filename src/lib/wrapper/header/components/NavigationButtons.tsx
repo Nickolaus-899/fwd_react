@@ -9,6 +9,7 @@ import person from "@/lib/wrapper/images/person-check.svg"
 import Image from "next/image";
 
 import {BiHomeAlt2} from "react-icons/bi";
+import {UserTokenInfo} from "@/app/classes";
 
 const NavigationButtons: ({
 
@@ -17,6 +18,14 @@ const NavigationButtons: ({
 }) => JSX.Element = ({
 
 }) => {
+    let link: string
+    const check = localStorage.getItem("userInfo")
+    if (check) {
+        const userInfo: UserTokenInfo = JSON.parse(localStorage.getItem("userInfo") as string)
+        link = `/auth/${userInfo.admin ? "admin" : "user"}/${userInfo.token}`
+    } else {
+        link = "/auth"
+    }
 
     return (
         <>
@@ -25,7 +34,7 @@ const NavigationButtons: ({
                     <Image src={cart} alt="cart"/>
                 </a>
 
-                <a className="NavItem" href="/auth">
+                <a className="NavItem" href={link}>
                     <Image src={person} alt="person"/>
                 </a>
             </div>

@@ -1,13 +1,19 @@
 "use client"
 import React, {useEffect, useState} from 'react'
-import {addToMenuFormType, nullClient, nullDish, nullFunction} from "@/app/classes";
+import {
+    addToMenuFormType,
+    authWasNotDoneFormType,
+    nullClient,
+    nullDish,
+    nullFunction,
+    UserTokenInfo
+} from "@/app/classes";
 import FoodPicture from "@/lib/home/components/FoodPicture";
 import "@/lib/home/css/index.css"
 import "@/lib/home/css/bootstrap.min.css"
 import {LuVegan} from "react-icons/lu";
 import MyButton from "@/lib/home/components/MyButton";
 import {addDish, fetchData} from "@/app/fetch";
-import {userId} from "@/app/user";
 import GeneralForm from "@/lib/form/components/GeneralForm";
 
 function DishMain({params} : {params : {id: string}}) {
@@ -19,16 +25,26 @@ function DishMain({params} : {params : {id: string}}) {
     const [showAddingToMenuForm, setShowAddingToMenuForm] =
         useState(false)
 
-    const openFormHandler = () => {
-        fetchData().then(clients => {
-            for (let i = 0; i < clients.length; i++) {
-                if (clients[i].id === userId) {
-                    setClient(clients[i])
-                    break
+
+    const [showAuthForm, setShowAuthForm] = useState(false)
+
+    async function openFormHandler() {
+        let check = localStorage.getItem("userInfo")
+
+        if (check) {
+            let userToken: UserTokenInfo = JSON.parse(localStorage.getItem("userInfo") as string)
+            await fetchData().then(clients => {
+                for (let i = 0; i < clients.length; i++) {
+                    if (clients[i].token === userToken.token) {
+                        setClient(clients[i])
+                        break
+                    }
                 }
-            }
-        })
-        setShowAddingToMenuForm(true)
+            })
+            setShowAddingToMenuForm(true)
+        } else {
+            setShowAuthForm(true)
+        }
     }
 
     const addDishToMenuHandler = () => {
@@ -39,6 +55,10 @@ function DishMain({params} : {params : {id: string}}) {
 
     const closeFormHandler = () => {
         setShowAddingToMenuForm(false)
+    }
+
+    const closeAuthFormHandler = () => {
+        setShowAuthForm(false)
     }
 
     const fetchDetails = async () => {
@@ -76,6 +96,20 @@ function DishMain({params} : {params : {id: string}}) {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeFormHandler}
+                        deleteDishHandler={nullFunction}
+                        dish={nullDish}
+                        addToMenuHandler={addDishToMenuHandler}
+                    />
+                ) : null
+            }
+            {
+                showAuthForm ? (
+                    <GeneralForm
+                        type={authWasNotDoneFormType}
+                        setIsOpenForm={setShowAuthForm}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeAuthFormHandler}
                         deleteDishHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={addDishToMenuHandler}

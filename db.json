@@ -2,7 +2,7 @@
   "clients": [
     {
       "id": 1,
-      "name": "Nickolaus",
+      "token": "Nickolaus",
       "email": "hohoho@mail.ru",
       "admin": true,
       "admin_info": {
@@ -54,7 +54,7 @@
     },
     {
       "id": 2,
-      "name": "Kseniia",
+      "token": "Kseniia",
       "email": "hahaha@mail.ru",
       "admin": true,
       "admin_info": {
@@ -76,7 +76,7 @@
     },
     {
       "id": 3,
-      "name": "SomeUser",
+      "token": "Haha",
       "email": "user@mail.ru",
       "admin": false,
       "dishes": [
@@ -101,7 +101,17 @@
           "link": ""
         }
       ]
+    },
+    {
+      "token": "BFD4DED8D3",
+      "admin": false,
+      "admin_info": {
+        "restaurant": "",
+        "cuisine": ""
+      },
+      "dishes": [],
+      "email": "check@check.com",
+      "id": 1690021685
     }
-  ],
-  "tokens": []
+  ]
 }

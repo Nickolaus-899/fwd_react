@@ -1,5 +1,4 @@
 import React, {JSX} from 'react'
-import {Dish} from "@/app/classes";
 
 const ConfirmationForm: ({closeFormHandler, deleteDishHandler}
                              : {closeFormHandler: Function, deleteDishHandler: Function})

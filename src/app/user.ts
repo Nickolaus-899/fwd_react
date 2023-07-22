@@ -1,1 +1,0 @@
-export let userId: number = 3

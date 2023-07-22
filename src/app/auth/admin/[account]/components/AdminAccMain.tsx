@@ -16,7 +16,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
 
     function findClient(clients: Client[]) {
         for (let i = 0; i < clients.length; i++) {
-            if (clients[i].name === name) {
+            if (clients[i].token === name) {
                 setClient(clients[i])
             }
         }

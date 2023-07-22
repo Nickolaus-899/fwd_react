@@ -25,7 +25,7 @@ export const nullAdminInfo: AdminInfo = {
 
 export interface Client {
     id: number,
-    name: string,
+    token: string,
     email: string,
     admin: boolean,
     admin_info: AdminInfo,
@@ -48,7 +48,7 @@ export const emptyClientsArray: Client[] = []
 
 export const nullClient: Client = {
     id: 0,
-    name: "client",
+    token: "",
     email: "",
     admin: false,
     admin_info: nullAdminInfo,
@@ -56,8 +56,19 @@ export const nullClient: Client = {
 }
 
 
+export interface UserTokenInfo {
+    token: string,
+    name: string,
+    admin: boolean
+}
+
+
 export const addDishFormType: string = 'add_dish'
 export const confirmationFormType: string = 'confirm'
 export const addToMenuFormType: string = 'add_to_menu'
+export const authFailedFormType: string = 'auth_fail'
+export const authWasNotDoneFormType: string = 'auth_not_done'
+export const differentPasswordsFormType: string = 'different_passwords'
+export const authCompletedFormType: string = 'auth_completed'
 
 export const nullFunction = () => {}

@@ -73,7 +73,8 @@
     border: none;
     border-radius: 5px;
 
-    transition: 100ms;
+    /*transition: 100ms;*/
+    transition: background-color 0.3s ease-in;
 
     cursor: pointer;
 }
@@ -84,7 +85,11 @@
 
 
 .login-screen-button:hover {
-    background-color: rgba(191, 128, 48, 0.29);;
+    background-color: rgba(225, 132, 36, 0.83);;
+}
+
+.login-screen-button:active {
+    background-color: rgba(141, 97, 43, 0.29);;
 }
 
 .login-screen-left {

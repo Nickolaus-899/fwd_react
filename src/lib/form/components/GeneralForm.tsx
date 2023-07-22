@@ -1,9 +1,20 @@
 import React, {JSX} from 'react'
 import "./../css/index.css"
-import {addDishFormType, addToMenuFormType, confirmationFormType, Dish} from "@/app/classes";
+import {
+    addDishFormType,
+    addToMenuFormType, authCompletedFormType,
+    authFailedFormType,
+    authWasNotDoneFormType,
+    confirmationFormType, differentPasswordsFormType,
+    Dish
+} from "@/app/classes";
 import AddDishForm from "@/lib/form/components/AddDishForm";
 import ConfirmationForm from "@/lib/form/components/ConfirmationForm";
 import AddToMenuForm from "@/lib/form/components/AddToMenuForm";
+import AuthFailedForm from "@/lib/form/components/AuthFailedForm";
+import AuthWasNotDone from "@/lib/form/components/AuthWasNotDoneForm";
+import DifferentPasswordsForm from "@/lib/form/components/DifferentPasswordsForm";
+import AuthWasCompletedForm from "@/lib/form/components/AuthWasCompletedForm";
 
 const GeneralForm: ({
                         type,
@@ -60,6 +71,26 @@ const GeneralForm: ({
                             addToMenuHandler={addToMenuHandler}
                             closeFormHandler={closeFormHandler}
                         />
+                    ) : null
+                }
+                {
+                    type === authFailedFormType ? (
+                        <AuthFailedForm closeFormHandler={closeFormHandler}/>
+                    ) : null
+                }
+                {
+                    type === authWasNotDoneFormType ? (
+                        <AuthWasNotDone closeFormHandler={closeFormHandler}/>
+                    ) : null
+                }
+                {
+                    type === differentPasswordsFormType ? (
+                        <DifferentPasswordsForm closeFormHandler={closeFormHandler}/>
+                    ) : null
+                }
+                {
+                    type === authCompletedFormType ? (
+                        <AuthWasCompletedForm closeFormHandler={closeFormHandler}/>
                     ) : null
                 }
             </div>
