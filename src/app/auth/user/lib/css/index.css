@@ -81,7 +81,19 @@
 
 .submit-buttons {
     width: 100%;
+    margin-top: 20px;
 }
+.userAccName Image, h1, h2 {
+    font-size: 25px;
+    vertical-align: middle;
+    line-height: normal;
+    display: inline-block;
+    text-align: center;
+}
+.userAccName {
+    padding-top: 30px;
+}
+
 
 
 .login-screen-button:hover {

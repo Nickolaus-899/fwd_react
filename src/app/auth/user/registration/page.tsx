@@ -138,13 +138,13 @@ function Page() {
                     />
                 ) : null
             }
-            <button
-                className="login-screen-button"
-                type="submit"
-                onClick={() => signUpHandler()}
-            >
-                Sign Up
-            </button>
+            {/*<button*/}
+            {/*    className="login-screen-button"*/}
+            {/*    type="submit"*/}
+            {/*    onClick={() => signUpHandler()}*/}
+            {/*>*/}
+            {/*    Sign Up*/}
+            {/*</button>*/}
             <section className="bodyCenter">
                 <div className="registrationFormCard">
                     <div className={"head"}>
@@ -209,17 +209,17 @@ function Page() {
                                 onChange={(e: { target: { value: string; }; }) => setCheckPassword(e.target.value)}
                             />
                         </div>
-                        <div className="submit-buttons">
-                            <button
-                                className="login-screen-button"
-                                type="submit"
-                                onClick={() => signUpHandler()}
-                            >
-                                Sign Up
-                            </button>
-                            <a className="login-screen-left block-display" href="/auth/user">Already have an account</a>
-                        </div>
                     </form>
+                    <div className="submit-buttons">
+                        <button
+                            className="login-screen-button"
+                            type="submit"
+                            onClick={() => signUpHandler()}
+                        >
+                            Sign Up
+                        </button>
+                    </div>
+                    <a className="login-screen-left block-display" href="/auth/user">Already have an account</a>
                 </div>
             </section>
         </>

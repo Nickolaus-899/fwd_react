@@ -22,8 +22,8 @@ function Page() {
                     </div>
 
                     <div className="input">
-                        <label htmlFor="input">Surname</label>
-                        <input type="text" id="surname" name="surname" placeholder=""/>
+                        <label htmlFor="input">Cousine</label>
+                        <input type="text" id="cousine" name="cousine" placeholder=""/>
                     </div>
                     <div className="input">
                         <label htmlFor="input">Restaurant</label>
