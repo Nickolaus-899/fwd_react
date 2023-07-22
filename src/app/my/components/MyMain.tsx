@@ -1,60 +1,131 @@
-import React from 'react'
+"use client"
+import React, {useEffect, useState} from 'react'
 import Image from "next/image";
 import dish1 from '@/app/my/images/dish1.png'
-import {Dish} from "@/app/classes";
+import {
+    authWasNotDoneFormType,
+    Client,
+    Dish, emptyDishesArray,
+    nullClient,
+    nullDish,
+    nullFunction,
+    userInfoKey,
+    UserTokenInfo
+} from "@/app/classes";
 import FoodItemInMenu from "@/app/my/components/FoodItemInMenu";
+import GeneralForm from "@/lib/form/components/GeneralForm";
+import {fetchData} from "@/app/fetch";
 function MyMain() {
-    const dish: Dish = {
-        id: 1,
-        title: "dish1",
-        price: 300,
-        calories: 300,
-        vegetarian: true,
-        cuisine: "italian",
-        img: "https://lafoy.ru/photo_l/blyuda-iz-ryby-recepty-foto-1383-0.jpg",
-        link: "https://lafoy.ru/blyuda-iz-ryby-recepty-1383"
-    }
-    let myArray: Dish[] = []
+    const [isOpenAuthWasNotDoneForm,
+        setOpenAuthWasNotDoneForm] = useState(false)
 
-    for (let i = 0; i < 5; i++) {
-        myArray = [...myArray, dish]
+    const [client, setClient] = useState(nullClient)
+
+    const [totalCalories, setTotalCalories] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
+
+    const [myArray, setMyArray] = useState(emptyDishesArray)
+
+    const closeAuthForm = () => {
+        setOpenAuthWasNotDoneForm(false)
     }
 
-    let totalCalories: number = 0
-    let totalPrice: number = 0
+    async function loadClient(token: string) {
+        await fetchData().then(clients => {
+            for (let i = 0; i < clients.length; i++) {
+                if (clients[i].token === token) {
+                    setClient(clients[i])
+                    break
+                }
+            }
+        })
+    }
 
-    myArray.map((dish) => {
-        totalCalories = totalCalories + dish.calories
-        totalPrice = totalPrice + dish.price
-    })
+    // const dish: Dish = {
+    //     id: 1,
+    //     title: "dish1",
+    //     price: 300,
+    //     calories: 300,
+    //     vegetarian: true,
+    //     cuisine: "italian",
+    //     img: "https://lafoy.ru/photo_l/blyuda-iz-ryby-recepty-foto-1383-0.jpg",
+    //     link: "https://lafoy.ru/blyuda-iz-ryby-recepty-1383"
+    // }
+
+    // let myArray: Dish[] = []
+
+    // for (let i = 0; i < 5; i++) {
+    //     myArray = [...myArray, dish]
+    // }
+
+    async function loadDishes() {
+        setMyArray(emptyDishesArray)
+        setTotalPrice(0)
+        setTotalCalories(0)
+
+        let check = localStorage.getItem(userInfoKey)
+        if (check) {
+            let token: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
+            await loadClient(token.token)
+
+            for (let i = 0; i < client.dishes.length; i++) {
+                setMyArray(prevState => [...prevState, client.dishes[i]])
+                setTotalCalories(prevState => prevState + client.dishes[i].calories)
+                setTotalPrice(prevState => prevState + client.dishes[i].price)
+            }
+        } else {
+            setOpenAuthWasNotDoneForm(true)
+        }
+    }
+
+    useEffect(() => {
+        loadDishes()
+    }, [])
+
     return (
-        <div className="row">
-            <div className="col-md-12">
-                <div className="my_menu">
-                    <h1>My menu</h1>
-                    {
-                        myArray.map((dish) => (
-                            <FoodItemInMenu dish={dish} key={dish.id}/>
-                        ))
-                    }
+        <>
+            {
+                isOpenAuthWasNotDoneForm ? (
+                    <GeneralForm
+                        type={authWasNotDoneFormType}
+                        setIsOpenForm={setOpenAuthWasNotDoneForm}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeAuthForm}
+                        deleteDishHandler={nullFunction}
+                        dish={nullDish}
+                        addToMenuHandler={nullFunction}
+                    />
+                ) : null
+            }
+            <div className="row">
+                <div className="col-md-12">
+                    <div className="my_menu">
+                        <h1>My menu</h1>
+                        {
+                            myArray.map((dish) => (
+                                <FoodItemInMenu dish={dish} key={dish.id}/>
+                            ))
+                        }
 
 
-                    <div className="total row">
+                        <div className="total row">
 
-                        <div className="col-md-3">
-                            <h2>Total:</h2>
+                            <div className="col-md-3">
+                                <h2>Total:</h2>
+                            </div>
+                            <div className="col-md-6">
+                                <h2 className="calories">{totalCalories} kk </h2>
+                            </div>
+                            <div className="price col-md-3">
+                                <h2> {totalPrice} rub </h2>
+                            </div>
+
                         </div>
-                        <div className="col-md-6">
-                            <h2 className="calories">{totalCalories} kk </h2>
-                        </div>
-                        <div className="price col-md-3">
-                            <h2> {totalPrice} rub </h2>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

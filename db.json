@@ -109,7 +109,18 @@
         "restaurant": "",
         "cuisine": ""
       },
-      "dishes": [],
+      "dishes": [
+        {
+          "id": 300,
+          "title": "Borsch",
+          "price": 350,
+          "calories": 700,
+          "vegetarian": false,
+          "cuisine": "Russian",
+          "img": "https://img.delo-vcusa.ru/2020/11/Borshh-s-yablokami.jpg",
+          "link": ""
+        }
+      ],
       "email": "check@check.com",
       "id": 1690021685
     }

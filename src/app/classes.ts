@@ -72,3 +72,5 @@ export const differentPasswordsFormType: string = 'different_passwords'
 export const authCompletedFormType: string = 'auth_completed'
 
 export const nullFunction = () => {}
+
+export const userInfoKey: string = "userInfo"
