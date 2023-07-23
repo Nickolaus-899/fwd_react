@@ -26,7 +26,7 @@
           "price": 500,
           "calories": 800,
           "vegetarian": false,
-          "cuisine": "",
+          "cuisine": "Russian",
           "img": "https://www.gastronom.ru/binfiles/images/20160506/b27984f0.jpg",
           "link": ""
         },

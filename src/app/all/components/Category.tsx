@@ -6,6 +6,7 @@ import American from "@/app/all/components/cuisines/American";
 import Japanese from "@/app/all/components/cuisines/Japanese";
 import FilterOff from "@/app/all/components/cuisines/FilterOff";
 import German from "@/app/all/components/cuisines/German";
+import Russian from "@/app/all/components/cuisines/Russian";
 
 function Category() {
     return (
@@ -14,6 +15,7 @@ function Category() {
             <Italian/>
             <American/>
             <Japanese/>
+            <Russian/>
             <German/>
         </li>
     )
