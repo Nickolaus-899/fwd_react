@@ -70,6 +70,8 @@ export const authFailedFormType: string = 'auth_fail'
 export const authWasNotDoneFormType: string = 'auth_not_done'
 export const differentPasswordsFormType: string = 'different_passwords'
 export const authCompletedFormType: string = 'auth_completed'
+export const logOutConfirmFormType: string = 'log_out'
+export const deleteAccountFormType: string = 'delete_acc'
 
 export const nullFunction = () => {}
 

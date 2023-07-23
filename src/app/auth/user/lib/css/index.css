@@ -141,3 +141,16 @@
     display: inline-block;
 
 }
+
+.AccountActionsButtonsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 15vh;
+}
+
+.AccountActionsButtonsWrapper button {
+    margin-top: 5vh;
+}

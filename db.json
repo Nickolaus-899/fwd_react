@@ -2,12 +2,12 @@
   "clients": [
     {
       "id": 1,
-      "token": "Nickolaus",
+      "token": "BFE0C8DDE3E5D2ECD8",
       "email": "hohoho@mail.ru",
       "admin": true,
       "admin_info": {
-        "restaurant": "IKEA",
-        "cuisine": ""
+        "restaurant": "Kaiserwurst",
+        "cuisine": "German"
       },
       "dishes": [
         {
@@ -49,17 +49,27 @@
           "cuisine": "Greek",
           "img": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg",
           "link": ""
+        },
+        {
+          "id": 1690108866,
+          "title": "Wurst",
+          "price": "1000",
+          "calories": "900",
+          "vegetarian": false,
+          "cuisine": "German",
+          "img": "https://res.cloudinary.com/djcyhbk2e/image/upload/c_limit,f_auto,q_50,w_1400/v1/gvv/prod/dav7whz1tcaspd3b0rol",
+          "link": "https://www.greatvaluevacations.com/travel-inspiration/the-wurst-of-germany"
         }
       ]
     },
     {
       "id": 2,
-      "token": "Kseniia",
+      "token": "BCEACAE0DDE2D2",
       "email": "hahaha@mail.ru",
       "admin": true,
       "admin_info": {
         "restaurant": "Haha",
-        "cuisine": "Italian"
+        "cuisine": ""
       },
       "dishes": [
         {
@@ -103,30 +113,8 @@
           "link": ""
         }
       ],
-      "email": "haha@haha",
+      "email": "",
       "id": 1690033113
-    },
-    {
-      "token": "BFE0C8DDB5DDDEE0D3",
-      "admin": true,
-      "admin_info": {
-        "restaurant": "Kaiserwurst",
-        "cuisine": "German"
-      },
-      "dishes": [
-        {
-          "id": 1690108866,
-          "title": "Wurst",
-          "price": "1000",
-          "calories": "900",
-          "vegetarian": false,
-          "cuisine": "German",
-          "img": "https://res.cloudinary.com/djcyhbk2e/image/upload/c_limit,f_auto,q_50,w_1400/v1/gvv/prod/dav7whz1tcaspd3b0rol",
-          "link": "https://www.greatvaluevacations.com/travel-inspiration/the-wurst-of-germany"
-        }
-      ],
-      "email": "german@ger.de",
-      "id": 1690108727
     }
   ]
 }

@@ -1,15 +1,27 @@
 "use client"
 import React, {useEffect, useState} from 'react'
-import {nullClient, userInfoKey, UserTokenInfo} from "@/app/classes";
-import {fetchData} from "@/app/fetch";
+import {
+    deleteAccountFormType,
+    logOutConfirmFormType,
+    nullClient,
+    nullDish,
+    nullFunction,
+    userInfoKey,
+    UserTokenInfo
+} from "@/app/classes";
+import {fetchData, removeClient} from "@/app/fetch";
 import '@/app/auth/user/lib/css/index.css'
 import icon from '@/app/auth/user/lib/images/account-avatar-man-svgrepo-com.svg';
 import Image from "next/image";
+import GeneralForm from "@/lib/form/GeneralForm";
 function Page({params} : {params : {account: string}}) {
     const [client, setClient] = useState(nullClient)
     const [userName, setUserName] = useState("")
     const [userEmail, setUserEmail] = useState("")
 
+
+    const [isLogOutForm, setLogOutForm] = useState(false)
+    const [isDeleteAccForm, setDeleteAccForm] = useState(false)
 
     async function loadClient() {
         fetchData().then(clients => {
@@ -30,16 +42,85 @@ function Page({params} : {params : {account: string}}) {
         }
     }
 
+
+    const closeAccForm = () => {
+        setDeleteAccForm(false)
+    }
+
+    const closeLogOutForm = () => {
+        setLogOutForm(false)
+    }
+
+    const openLogOutFormHandler = () => {
+        setLogOutForm(true)
+    }
+
+    const openDeleteAccFormHandler = () => {
+        setDeleteAccForm(true)
+    }
+
+    const logOut = () => {
+        localStorage.removeItem("userInfo")
+    }
+
+    const deleteAcc = () => {
+        removeClient(client)
+        logOut()
+    }
+
     useEffect(() => {
         loadClient()
     }, [])
     return (
         <div>
+            {
+                isLogOutForm ? (
+                    <GeneralForm
+                        type={logOutConfirmFormType}
+                        setIsOpenForm={setLogOutForm}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeLogOutForm}
+                        deleteHandler={logOut}
+                        dish={nullDish}
+                        addToMenuHandler={nullFunction}
+                    />
+                ) : null
+            }
+            {
+                isDeleteAccForm ? (
+                    <GeneralForm
+                        type={deleteAccountFormType}
+                        setIsOpenForm={setDeleteAccForm}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeAccForm}
+                        deleteHandler={deleteAcc}
+                        dish={nullDish}
+                        addToMenuHandler={nullFunction}
+                    />
+                ) : null
+            }
 
             <div className="userAccName row">
                 <Image src={icon} alt="userAccFoto" width={250} height={250}></Image>
                 <h1>Name: {userName} </h1>
-                <h2>Email: {client.email}</h2>
+                {
+                    client.email !== "" ? (
+                        <h2>Email: {client.email}</h2>
+                    ) : (
+                        <h2>Email was not provided</h2>
+                    )
+                }
+            </div>
+
+            <div className="AccountActionsButtonsWrapper">
+                <button className="MyButton" onClick={() => openLogOutFormHandler()}>
+                    Log Out
+                </button>
+                <button className="MyButton" onClick={() => openDeleteAccFormHandler()}>
+                    Delete Account
+                </button>
             </div>
         </div>
     )

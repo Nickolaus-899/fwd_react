@@ -16,7 +16,7 @@ import {
     UserTokenInfo
 } from "@/app/classes";
 import moment from "moment/moment";
-import GeneralForm from "@/lib/form/components/GeneralForm";
+import GeneralForm from "@/lib/form/GeneralForm";
 
 function Page() {
     const [name, setName] = useState("")
@@ -112,7 +112,7 @@ function Page() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeAuthFormHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />
@@ -126,7 +126,7 @@ function Page() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closePasswordFormHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />
@@ -140,7 +140,7 @@ function Page() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeCompletedHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />

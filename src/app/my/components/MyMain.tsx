@@ -13,7 +13,7 @@ import {
     UserTokenInfo
 } from "@/app/classes";
 import FoodItemInMenu from "@/app/my/components/FoodItemInMenu";
-import GeneralForm from "@/lib/form/components/GeneralForm";
+import GeneralForm from "@/lib/form/GeneralForm";
 import {fetchData} from "@/app/fetch";
 function MyMain() {
     const [isOpenAuthWasNotDoneForm,
@@ -98,7 +98,7 @@ function MyMain() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeAuthForm}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />

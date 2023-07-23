@@ -19,21 +19,24 @@ const NavigationButtons: ({
 
 }) => {
     const [link, setLink] = useState("/auth")
+    const [myMenu, setMyMenu] = useState("/auth")
 
     useEffect(() => {
         const check = localStorage.getItem("userInfo")
         if (check) {
             const userInfo: UserTokenInfo = JSON.parse(localStorage.getItem("userInfo") as string)
             setLink(`/auth/${userInfo.admin ? "admin" : "user"}/${userInfo.token}`)
+            setMyMenu(`${userInfo.admin ? `/auth/admin/${userInfo.token}` : "/my"}`)
         } else {
             setLink("/auth")
+            setMyMenu("/auth")
         }
     }, [])
 
     return (
         <>
             <div className="NavWrapper">
-                <a className="NavItem" href="/my">
+                <a className="NavItem" href={myMenu}>
                     <Image src={cart} alt="cart"/>
                 </a>
 

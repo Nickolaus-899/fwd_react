@@ -14,7 +14,7 @@ import "@/lib/home/css/bootstrap.min.css"
 import {LuVegan} from "react-icons/lu";
 import MyButton from "@/lib/home/components/MyButton";
 import {addDish, fetchData} from "@/app/fetch";
-import GeneralForm from "@/lib/form/components/GeneralForm";
+import GeneralForm from "@/lib/form/GeneralForm";
 
 function DishMain({params} : {params : {id: string}}) {
     const [details, setDetails] = useState(nullDish);
@@ -96,7 +96,7 @@ function DishMain({params} : {params : {id: string}}) {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeFormHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={addDishToMenuHandler}
                     />
@@ -110,7 +110,7 @@ function DishMain({params} : {params : {id: string}}) {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeAuthFormHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={addDishToMenuHandler}
                     />
@@ -154,9 +154,13 @@ function DishMain({params} : {params : {id: string}}) {
                         <a href={details.link} target="_blank">
                             <MyButton/>
                         </a>
-                        <button className="MyButton" onClick={() => {openFormHandler()}}>
-                            Add to My Menu
-                        </button>
+                        {
+                            !client.admin ? (
+                                <button className="MyButton" onClick={() => {openFormHandler()}}>
+                                    Add to My Menu
+                                </button>
+                            ) : null
+                        }
                     </div>
                 </li>
             </div>

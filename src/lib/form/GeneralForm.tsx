@@ -1,12 +1,12 @@
 import React, {JSX} from 'react'
-import "./../css/index.css"
+import "./css/index.css"
 import {
     addDishFormType,
     addToMenuFormType, authCompletedFormType,
     authFailedFormType,
     authWasNotDoneFormType,
-    confirmationFormType, differentPasswordsFormType,
-    Dish
+    confirmationFormType, deleteAccountFormType, differentPasswordsFormType,
+    Dish, logOutConfirmFormType
 } from "@/app/classes";
 import AddDishForm from "@/lib/form/components/AddDishForm";
 import ConfirmationForm from "@/lib/form/components/ConfirmationForm";
@@ -15,6 +15,8 @@ import AuthFailedForm from "@/lib/form/components/AuthFailedForm";
 import AuthWasNotDone from "@/lib/form/components/AuthWasNotDoneForm";
 import DifferentPasswordsForm from "@/lib/form/components/DifferentPasswordsForm";
 import AuthWasCompletedForm from "@/lib/form/components/AuthWasCompletedForm";
+import LogOutForm from "@/lib/form/components/LogOutForm";
+import DeleteAccForm from "@/lib/form/components/DeleteAccForm";
 
 const GeneralForm: ({
                         type,
@@ -22,7 +24,7 @@ const GeneralForm: ({
                         changeEventHandler,
                         createDishHandler,
                         closeFormHandler,
-                        deleteDishHandler,
+                        deleteHandler,
                         dish,
                         addToMenuHandler
 } : {
@@ -31,7 +33,7 @@ const GeneralForm: ({
     changeEventHandler: Function,
     createDishHandler: Function,
     closeFormHandler: Function,
-    deleteDishHandler: Function,
+    deleteHandler: Function,
     dish: Dish,
     addToMenuHandler: Function
 }) => JSX.Element = ({
@@ -40,7 +42,7 @@ const GeneralForm: ({
                                             changeEventHandler,
                                             createDishHandler,
                                             closeFormHandler,
-                                            deleteDishHandler,
+                                            deleteHandler,
                                             dish,
                                             addToMenuHandler
 }) => {
@@ -61,7 +63,7 @@ const GeneralForm: ({
                     type === confirmationFormType ? (
                         <ConfirmationForm
                             closeFormHandler={closeFormHandler}
-                            deleteDishHandler={deleteDishHandler}
+                            deleteDishHandler={deleteHandler}
                         />
                     ) : null
                 }
@@ -91,6 +93,16 @@ const GeneralForm: ({
                 {
                     type === authCompletedFormType ? (
                         <AuthWasCompletedForm closeFormHandler={closeFormHandler}/>
+                    ) : null
+                }
+                {
+                    type === logOutConfirmFormType ? (
+                        <LogOutForm closeFormHandler={closeFormHandler} logOutHandler={deleteHandler}/>
+                    ) : null
+                }
+                {
+                    type === deleteAccountFormType ? (
+                        <DeleteAccForm closeFormHandler={closeFormHandler} deleteAccHandler={deleteHandler}/>
                     ) : null
                 }
             </div>

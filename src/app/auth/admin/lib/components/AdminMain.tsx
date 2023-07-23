@@ -6,7 +6,7 @@ import '@/app/auth/user/lib/css/index.css'
 import {encodeName} from "@/app/enigma";
 import {fetchData} from "@/app/fetch";
 import {authCompletedFormType, authFailedFormType, nullDish, nullFunction, UserTokenInfo} from "@/app/classes";
-import GeneralForm from "@/lib/form/components/GeneralForm";
+import GeneralForm from "@/lib/form/GeneralForm";
 function AdminMain() {
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
@@ -66,7 +66,7 @@ function AdminMain() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeAuthFormHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />
@@ -80,7 +80,7 @@ function AdminMain() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeCompletedHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />

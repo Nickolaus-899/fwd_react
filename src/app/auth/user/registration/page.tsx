@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import Image from "next/image";
 import icon from '@/app/auth/user/lib/images/fork-and-knife.svg';
 import '@/app/auth/user/lib/css/index.css'
-import GeneralForm from "@/lib/form/components/GeneralForm";
+import GeneralForm from "@/lib/form/GeneralForm";
 import {
     authCompletedFormType,
     authFailedFormType,
@@ -107,7 +107,7 @@ function Page() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeAuthFormHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />
@@ -121,7 +121,7 @@ function Page() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closePasswordFormHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />
@@ -135,7 +135,7 @@ function Page() {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeCompletedHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />

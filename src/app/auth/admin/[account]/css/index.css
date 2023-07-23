@@ -68,3 +68,16 @@
     justify-content: flex-end;
     align-items: center;
 }
+
+.ButtonDeleteWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 15vh;
+}
+
+.ButtonDeleteWrapper button {
+    margin-top: 5vh;
+}

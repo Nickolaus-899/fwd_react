@@ -1,10 +1,19 @@
 "use client"
 import React, {JSX, useEffect, useState} from 'react'
 import {fetchAdminData} from "@/app/auth/admin/[account]/fetchAdminData";
-import {addDishFormType, Client, confirmationFormType, Dish, nullClient, nullDish, nullFunction} from "@/app/classes";
+import {
+    addDishFormType,
+    Client,
+    confirmationFormType, deleteAccountFormType,
+    Dish,
+    logOutConfirmFormType,
+    nullClient,
+    nullDish,
+    nullFunction
+} from "@/app/classes";
 import FoodItemInList from "@/app/auth/admin/[account]/components/FoodItemInList";
-import {addDish, deleteDish} from "@/app/fetch";
-import GeneralForm from "@/lib/form/components/GeneralForm";
+import {addDish, deleteDish, removeClient} from "@/app/fetch";
+import GeneralForm from "@/lib/form/GeneralForm";
 import moment from "moment";
 
 const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
@@ -13,6 +22,8 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
 
     const [isOpenForm, setIsOpenForm] = useState(false)
     const [isConfirmForm, setConfirmForm] = useState(false)
+    const [isLogOutForm, setLogOutForm] = useState(false)
+    const [isDeleteAccForm, setDeleteAccForm] = useState(false)
 
     function findClient(clients: Client[]) {
         for (let i = 0; i < clients.length; i++) {
@@ -75,6 +86,31 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
         setDish(selectedDish)
     }
 
+    const closeAccForm = () => {
+        setDeleteAccForm(false)
+    }
+
+    const closeLogOutForm = () => {
+        setLogOutForm(false)
+    }
+
+    const openLogOutFormHandler = () => {
+        setLogOutForm(true)
+    }
+
+    const openDeleteAccFormHandler = () => {
+        setDeleteAccForm(true)
+    }
+
+    const logOut = () => {
+        localStorage.removeItem("userInfo")
+    }
+
+    const deleteAcc = () => {
+        removeClient(client)
+        logOut()
+    }
+
     useEffect(() => {
         fetchHandler().then(r => r)
     }, [name])
@@ -88,7 +124,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         changeEventHandler={changeEventHandler}
                         createDishHandler={createDishHandler}
                         closeFormHandler={closeFormHandler}
-                        deleteDishHandler={nullFunction}
+                        deleteHandler={nullFunction}
                         dish={dish}
                         addToMenuHandler={nullFunction}
                     />
@@ -102,7 +138,35 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         changeEventHandler={nullFunction}
                         createDishHandler={nullFunction}
                         closeFormHandler={closeConfirmPage}
-                        deleteDishHandler={deleteDishHandler}
+                        deleteHandler={deleteDishHandler}
+                        dish={nullDish}
+                        addToMenuHandler={nullFunction}
+                    />
+                ) : null
+            }
+            {
+                isLogOutForm ? (
+                    <GeneralForm
+                        type={logOutConfirmFormType}
+                        setIsOpenForm={setLogOutForm}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeLogOutForm}
+                        deleteHandler={logOut}
+                        dish={nullDish}
+                        addToMenuHandler={nullFunction}
+                    />
+                ) : null
+            }
+            {
+                isDeleteAccForm ? (
+                    <GeneralForm
+                        type={deleteAccountFormType}
+                        setIsOpenForm={setDeleteAccForm}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeAccForm}
+                        deleteHandler={deleteAcc}
                         dish={nullDish}
                         addToMenuHandler={nullFunction}
                     />
@@ -110,7 +174,9 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
             }
             <div className="AdmAccWrapper">
                 {/*<button className="MyButton" onClick={fetchHandler}>Click Me!</button>*/}
-                <button className="MyButton ButtonAddDishPosition" onClick={() => openCreationDishPageHandler()}>Add Dish</button>
+                <button className="MyButton ButtonAddDishPosition" onClick={() => openCreationDishPageHandler()}>
+                    Add Dish
+                </button>
                 {
                     client.dishes.map(dish => (
                         <FoodItemInList
@@ -120,6 +186,15 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                         />
                     ))
                 }
+
+                <div className="ButtonDeleteWrapper">
+                    <button className="MyButton" onClick={() => openLogOutFormHandler()}>
+                        Log Out
+                    </button>
+                    <button className="MyButton" onClick={() => openDeleteAccFormHandler()}>
+                        Delete Account
+                    </button>
+                </div>
             </div>
         </>
     )
