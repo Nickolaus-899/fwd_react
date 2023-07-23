@@ -76,3 +76,5 @@ export const deleteAccountFormType: string = 'delete_acc'
 export const nullFunction = () => {}
 
 export const userInfoKey: string = "userInfo"
+
+export const timeForReloading: number = 1000

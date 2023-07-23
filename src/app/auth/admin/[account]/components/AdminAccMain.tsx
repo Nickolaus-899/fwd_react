@@ -9,7 +9,7 @@ import {
     logOutConfirmFormType,
     nullClient,
     nullDish,
-    nullFunction
+    nullFunction, timeForReloading
 } from "@/app/classes";
 import FoodItemInList from "@/app/auth/admin/[account]/components/FoodItemInList";
 import {addDish, deleteDish, removeClient} from "@/app/fetch";
@@ -19,6 +19,8 @@ import moment from "moment";
 const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
     const [client, setClient] = useState(nullClient)
     const [dish, setDish] = useState(nullDish)
+
+    const [reload, setReload] = useState(false)
 
     const [isOpenForm, setIsOpenForm] = useState(false)
     const [isConfirmForm, setConfirmForm] = useState(false)
@@ -70,6 +72,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
     const deleteDishHandler = () => {
         deleteDish(client, dish)
 
+        setReload(true)
         setConfirmForm(false)
     }
 
@@ -113,7 +116,14 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
 
     useEffect(() => {
         fetchHandler().then(r => r)
-    }, [name])
+        if (reload) {
+            setReload(false)
+
+            setTimeout(function(){
+                location.reload();
+            }, timeForReloading);
+        }
+    }, [name, reload])
     return (
         <>
             {

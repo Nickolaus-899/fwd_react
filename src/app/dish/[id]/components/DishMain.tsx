@@ -5,7 +5,7 @@ import {
     authWasNotDoneFormType,
     nullClient,
     nullDish,
-    nullFunction,
+    nullFunction, timeForReloading,
     UserTokenInfo
 } from "@/app/classes";
 import FoodPicture from "@/lib/home/components/FoodPicture";
@@ -19,6 +19,8 @@ import GeneralForm from "@/lib/form/GeneralForm";
 function DishMain({params} : {params : {id: string}}) {
     const [details, setDetails] = useState(nullDish);
     const [restaurantName, setRestaurantName] = useState("")
+
+    const [userTokenName, setUserTokeName] = useState("")
     
     const [client, setClient] = useState(nullClient)
 
@@ -28,14 +30,29 @@ function DishMain({params} : {params : {id: string}}) {
 
     const [showAuthForm, setShowAuthForm] = useState(false)
 
+    async function updateClient() {
+        let check = localStorage.getItem("userInfo")
+        if (check) {
+            let userToken: UserTokenInfo = JSON.parse(localStorage.getItem("userInfo") as string)
+            setUserTokeName(userToken.token)
+            await fetchData().then(clients => {
+                for (let i = 0; i < clients.length; i++) {
+                    if (clients[i].token === userToken.token) {
+                        setClient(clients[i])
+                        break
+                    }
+                }
+            })
+        }
+    }
+
     async function openFormHandler() {
         let check = localStorage.getItem("userInfo")
 
         if (check) {
-            let userToken: UserTokenInfo = JSON.parse(localStorage.getItem("userInfo") as string)
             await fetchData().then(clients => {
                 for (let i = 0; i < clients.length; i++) {
-                    if (clients[i].token === userToken.token) {
+                    if (clients[i].token === userTokenName) {
                         setClient(clients[i])
                         break
                     }
@@ -49,6 +66,17 @@ function DishMain({params} : {params : {id: string}}) {
 
     const addDishToMenuHandler = () => {
         addDish(client, details)
+            .then(clients => {
+                for (let i = 0; i < clients.length; i++) {
+                    if (clients[i].token === userTokenName) {
+                        setClient(clients[i])
+                    }
+                }
+            })
+
+        setTimeout(function(){
+            window.location.href = '/all'
+        }, timeForReloading);
 
         closeFormHandler()
     }
@@ -85,6 +113,7 @@ function DishMain({params} : {params : {id: string}}) {
 
     useEffect(() => {
         fetchDetails();
+        updateClient();
     }, [params.id]);
     return (
         <div>

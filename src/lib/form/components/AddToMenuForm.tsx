@@ -1,4 +1,5 @@
 import React, {JSX} from 'react'
+import {timeForReloading} from "@/app/classes";
 
 const AddToMenuForm: ({
                           addToMenuHandler,
@@ -14,7 +15,7 @@ const AddToMenuForm: ({
         <div>
             <div className="WhiteColorForInputText">Do you really want to add this dish to your menu?</div>
             <div className="ButtonsWrapper">
-                <a href="/all">
+                <a>
                     <button className="ExtraButton" onClick={() => {addToMenuHandler()}}>Add</button>
                 </a>
 
