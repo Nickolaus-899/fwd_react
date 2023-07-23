@@ -5,8 +5,8 @@ import Veggie from "@/app/all/components/Veggie";
 import {Client, Dish, emptyDishesArray} from "@/app/classes";
 import {fetchData} from "@/app/fetch";
 
-const NUMBER_OF_POPULAR: number = 8
-const NUMBER_OF_VEGGIE: number = 8
+const NUMBER_OF_POPULAR: number = 100
+const NUMBER_OF_VEGGIE: number = 12
 
 function AllMain() {
     let clients: Client[] = []
@@ -96,10 +96,10 @@ function AllMain() {
             <div className="CuisineTitle">
                 You have selected all dishes!
             </div>
-            <Popular popular={popular}/>
             <div className="VeggiePosition">
                 <Veggie veggie={veggie}/>
             </div>
+            <Popular popular={popular}/>
         </div>
     )
 }

@@ -6,7 +6,7 @@ const Popular: ({popular} : {popular: Dish[]}) => JSX.Element = ({popular}) => {
 
     return (
         <div>
-            <div className="PopularTitle">Some sets</div>
+            <div className="PopularTitle">All sets</div>
             <li className="CategoryList PopularList">
             {
                 popular.map(item => {
