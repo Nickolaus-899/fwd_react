@@ -103,13 +103,23 @@
 }
 
 .SomeText text {
-    margin-left: 5vw;
 
     color: rgba(0, 0, 0, 0);
 
-    transition: color 0.6s ease-in;
-
     user-select: none;
+}
+
+.Secret1 {
+    margin-left: 5vw;
+    transition: color 0.6s ease-in;
+}
+
+.Secret2 {
+    transition: color 0.9s ease-in;
+}
+
+.Secret3 {
+    transition: color 1.2s ease-in;
 }
 
 .SomeText:hover text {
@@ -117,6 +127,6 @@
 }
 
 .SomeText text:hover {
-    color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0)!important;
 }
 
