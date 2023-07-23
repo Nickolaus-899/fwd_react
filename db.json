@@ -107,48 +107,26 @@
       "id": 1690033113
     },
     {
-      "token": "",
-      "admin": false,
+      "token": "BFE0C8DDB5DDDEE0D3",
+      "admin": true,
       "admin_info": {
-        "restaurant": "",
-        "cuisine": ""
+        "restaurant": "Kaiserwurst",
+        "cuisine": "German"
       },
-      "dishes": [],
-      "email": "",
-      "id": 1690062071
-    },
-    {
-      "token": "D1EDCBE6",
-      "admin": false,
-      "admin_info": {
-        "restaurant": "",
-        "cuisine": ""
-      },
-      "dishes": [],
-      "email": "kj,bn",
-      "id": 1690062668
-    },
-    {
-      "token": "B6E6B0E1B4DCAC",
-      "admin": false,
-      "admin_info": {
-        "restaurant": "",
-        "cuisine": ""
-      },
-      "dishes": [],
-      "email": "gfrt@kjhzf",
-      "id": 1690063379
-    },
-    {
-      "token": "4B64A1",
-      "admin": false,
-      "admin_info": {
-        "restaurant": "",
-        "cuisine": ""
-      },
-      "dishes": [],
-      "email": "gfrt@kjhzf",
-      "id": 1690064715
+      "dishes": [
+        {
+          "id": 1690108866,
+          "title": "Wurst",
+          "price": "1000",
+          "calories": "900",
+          "vegetarian": false,
+          "cuisine": "German",
+          "img": "https://res.cloudinary.com/djcyhbk2e/image/upload/c_limit,f_auto,q_50,w_1400/v1/gvv/prod/dav7whz1tcaspd3b0rol",
+          "link": "https://www.greatvaluevacations.com/travel-inspiration/the-wurst-of-germany"
+        }
+      ],
+      "email": "german@ger.de",
+      "id": 1690108727
     }
   ]
 }

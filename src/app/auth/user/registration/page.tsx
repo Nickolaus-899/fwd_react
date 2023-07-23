@@ -31,7 +31,10 @@ function Page() {
             openPasswordFormHandler()
             return
         }
-
+        if (name === "" || password === "") {
+            openAuthFormHandler()
+            return
+        }
         let token = encodeName(name, password)
         let applyReturn: boolean = false
         await fetchData().then(clients => {

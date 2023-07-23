@@ -1,10 +1,11 @@
 "use client"
 import React, {JSX, useEffect, useState} from 'react'
-import {nullClient} from "@/app/classes";
+import {nullClient, userInfoKey, UserTokenInfo} from "@/app/classes";
 import {fetchAdminData} from "@/app/auth/admin/[account]/fetchAdminData";
 
 const AdminAccHeader: ({name} : {name: string}) => JSX.Element = ({name}) => {
     const [client, setClient] = useState(nullClient)
+    const [userName, setUserName] = useState("")
 
     async function fetchHandler() {
         await fetchAdminData().then(clients => {
@@ -14,6 +15,14 @@ const AdminAccHeader: ({name} : {name: string}) => JSX.Element = ({name}) => {
                 }
             }
         })
+
+        let check = localStorage.getItem(userInfoKey)
+        if (check) {
+            let token: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
+            setUserName(token.name)
+        } else {
+            console.log('User is not authorized')
+        }
     }
 
     useEffect(() => {
@@ -21,7 +30,7 @@ const AdminAccHeader: ({name} : {name: string}) => JSX.Element = ({name}) => {
     }, [name])
     return (
         <div className="AdmAccWrapper">
-            <h1>Hello, {name}{client.admin_info.restaurant === "" ? "!" : null}</h1>`
+            <h1>Hello, {userName}{client.admin_info.restaurant === "" ? "!" : null}</h1>`
             {/*<div>You can add, delete and update dishes</div>*/}
 
             {
