@@ -78,3 +78,6 @@ export const nullFunction = () => {}
 export const userInfoKey: string = "userInfo"
 
 export const timeForReloading: number = 1000
+
+export const MIN_NAME_LENGTH: number = 4
+export const MAX_NAME_LENGTH: number = 15
