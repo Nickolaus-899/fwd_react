@@ -110,7 +110,7 @@ function MyMain() {
                         <h1>My menu</h1>
                         {
                             myArray.map((dish) => (
-                                <FoodItemInMenu dish={dish} key={dish.id}/>
+                                <FoodItemInMenu dish={dish} client={client} key={dish.id}/>
                             ))
                         }
 
