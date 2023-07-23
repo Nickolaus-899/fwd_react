@@ -3,8 +3,6 @@ import React, {useEffect, useState} from 'react'
 import {nullClient, userInfoKey, UserTokenInfo} from "@/app/classes";
 import {fetchData} from "@/app/fetch";
 import '@/app/auth/user/lib/css/index.css'
-import {email} from "@sideway/address";
-import {token} from "stylis";
 import icon from '@/app/auth/user/lib/images/account-avatar-man-svgrepo-com.svg';
 import Image from "next/image";
 function Page({params} : {params : {account: string}}) {
