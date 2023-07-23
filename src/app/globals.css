@@ -6,6 +6,12 @@
   text-decoration: none;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .inside {
   margin-top: 11vh;
   margin-bottom: 11vh;

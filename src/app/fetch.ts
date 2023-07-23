@@ -23,6 +23,8 @@ export async function addDish(client: Client, dish: Dish): Promise<Client[]> {
     //     },
     //     body: JSON.stringify(client)
     // }
+    dish.price = parseInt(dish.price.toString())
+    dish.calories = parseInt(dish.calories.toString())
 
     const res = await addDishDB(client.token, dish)
     return res as Client[]

@@ -31,6 +31,7 @@ const AddDishForm: ({
             <div className="InputCustom">
                 <div className="WhiteColorForInputText">Price:</div>
                 <input
+                    type="number"
                     onChange={(e: { target: { value: string; }; }) => changeEventHandler(e.target.value, 'price')}
                     placeholder="Price"
                     className="WhiteColorForInputText"
@@ -39,6 +40,7 @@ const AddDishForm: ({
             <div className="InputCustom">
                 <div className="WhiteColorForInputText">Calories:</div>
                 <input
+                    type="number"
                     onChange={(e: { target: { value: string; }; }) => changeEventHandler(e.target.value, 'calories')}
                     placeholder="Calories"
                     className="WhiteColorForInputText"
