@@ -3,7 +3,7 @@ import '@/lib/wrapper/css/position.css'
 
 function SomeText() {
     return (
-        <div className="FooterText SomeText">Some_text</div>
+        <div className="FooterText SomeText"><div>InnoFood</div><text>N&K</text></div>
     )
 }
 

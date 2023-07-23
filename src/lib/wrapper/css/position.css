@@ -89,5 +89,34 @@
 
 .SomeText {
     left: 3rem;
+    font-family: "Kaufmann BT", 'sans-serif';
+    font-size: 30px;
+
+    display: flex;
+    flex-direction: row;
+
+    user-select: none;
+}
+
+.SomeText div {
+    cursor: pointer;
+}
+
+.SomeText text {
+    margin-left: 5vw;
+
+    color: rgba(0, 0, 0, 0);
+
+    transition: color 0.6s ease-in;
+
+    user-select: none;
+}
+
+.SomeText:hover text {
+    color: crimson;
+}
+
+.SomeText text:hover {
+    color: rgba(0, 0, 0, 0);
 }
 
