@@ -125,16 +125,17 @@ function AuthMain() {
                                 onChange={(e: { target: { value: string; }; }) => setPassword(e.target.value)}
                             />
                         </div>
-                        <div className="submit-buttons">
-                            <button
-                                className="login-screen-button"
-                                type="submit"
-                                onClick={() => logInHandler()}
-                            >Log in</button>
-                            <a className="login-screen-left block-display" href="/auth/user/registration">Create an account</a>
-                            <a className="login-screen-right block-display" href="">Forgot password?</a>
-                        </div>
+
                     </form>
+                    <div className="submit-buttons">
+                        <button
+                            className="login-screen-button"
+                            type="submit"
+                            onClick={() => logInHandler()}
+                        >Log in</button>
+                        <a className="login-screen-left block-display" href="/auth/user/registration">Create an account</a>
+                        <a className="login-screen-right block-display" href="">Forgot password?</a>
+                    </div>
                 </div>
             </section>
         </>

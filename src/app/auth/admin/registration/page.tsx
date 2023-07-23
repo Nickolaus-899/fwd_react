@@ -227,17 +227,18 @@ function Page() {
                                 onChange={(e: { target: { value: string; }; }) => setCheckPassword(e.target.value)}
                             />
                         </div>
-                        <div className="submit-buttons">
-                            <button
-                                className="login-screen-button"
-                                type="submit"
-                                onClick={() => signUpHandler()}
-                            >
-                                Sign Up
-                            </button>
-                            <a className="login-screen-left block-display" href="/auth/admin">Already have an account</a>
-                        </div>
+
                     </form>
+                    <div className="submit-buttons">
+                        <button
+                            className="login-screen-button"
+                            type="submit"
+                            onClick={() => signUpHandler()}
+                        >
+                            Sign Up
+                        </button>
+                        <a className="login-screen-left block-display" href="/auth/admin">Already have an account</a>
+                    </div>
                 </div>
             </section>
         </>
