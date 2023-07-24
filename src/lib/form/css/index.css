@@ -1,147 +1,146 @@
 .FormPositionWrapper {
-    position: fixed;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.35);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.35);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .FormWrapper {
-    width: 500px;
+  width: 500px;
 
-    max-width: 80vw;
-   /*height: 300px;*/
-    min-height: 10vh;
-    box-shadow: unset;
+  max-width: 80vw;
+  /*height: 300px;*/
+  min-height: 10vh;
+  box-shadow: unset;
 
-    border-radius: 1rem;
-    padding: 10px;
+  border-radius: 1rem;
+  padding: 10px;
 
-    /*background-color: #1E1F21;*/
-    /*background-color: crimson;*/
-    background-color: rgb(211, 164, 123);
+  /*background-color: #1E1F21;*/
+  /*background-color: crimson;*/
+  background-color: rgb(211, 164, 123);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .InputCustom {
-    margin-top: 20px;
-    display: flex;
+  margin-top: 20px;
+  display: flex;
 }
 
 .InputCustom input {
-    padding: 8px 14px;
-    font-size: .85rem;
-    width: 100%;
-    border: unset;
-    background-color: rgb(211, 164, 123);
-    outline: unset;
-    border-bottom: 1px solid darkgray;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  width: 100%;
+  border: unset;
+  background-color: rgb(211, 164, 123);
+  outline: unset;
+  border-bottom: 1px solid darkgray;
 
-    max-width: 220px;
+  max-width: 220px;
 
-    /*overflow: hidden;*/
-    overflow-wrap: break-word;
+  /*overflow: hidden;*/
+  overflow-wrap: break-word;
 }
 
-
 .InputCustom div:first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*white-space: nowrap;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*white-space: nowrap;*/
 
-    /*min-width: 100px;*/
+  /*min-width: 100px;*/
 
-    /*width: 100px;*/
+  /*width: 100px;*/
 
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 @media (min-width: 1000px) {
-    .InputCustom div:first-child {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        white-space: nowrap;
-
-        /*min-width: 100px;*/
-
-        width: 100px;
-
-        margin-right: 20px;
-    }
-}
-
-.WhiteColorForInputText {
-    color: white;
-}
-
-.VeggieChooseWrapper {
-    display: flex;
-}
-
-.CheckMark {
-    cursor: pointer;
-
-    /*margin-left: 10px;*/
-}
-
-.CheckMark g {
-    transition: fill 0.3s ease-in;
-}
-
-.CheckMark:hover g {
-    fill: green;
-}
-
-.CheckMark:active g {
-    fill: #002d00;
-}
-
-.CrossRefuse {
-    transition: color 0.3s ease-in;
-
-    cursor: pointer;
-
-    color: black;
-
-    /*margin-left: 20px;*/
-
-    font-weight: 600;
-    font-size: 17px;
-
-    user-select: none;
-}
-
-.CrossRefuse:hover {
-    color: red;
-}
-
-.CrossRefuse:active {
-    color: darkred;
-}
-
-.ButtonsWrapper {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.ButtonsWrapper button {
-    margin-left: 25px;
-}
-
-.CompletedPosition {
+  .InputCustom div:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+
+    /*min-width: 100px;*/
+
+    width: 100px;
+
+    margin-right: 20px;
+  }
+}
+
+.WhiteColorForInputText {
+  color: white;
+}
+
+.VeggieChooseWrapper {
+  display: flex;
+}
+
+.CheckMark {
+  cursor: pointer;
+
+  /*margin-left: 10px;*/
+}
+
+.CheckMark g {
+  transition: fill 0.3s ease-in;
+}
+
+.CheckMark:hover g {
+  fill: green;
+}
+
+.CheckMark:active g {
+  fill: #002d00;
+}
+
+.CrossRefuse {
+  transition: color 0.3s ease-in;
+
+  cursor: pointer;
+
+  color: black;
+
+  /*margin-left: 20px;*/
+
+  font-weight: 600;
+  font-size: 17px;
+
+  user-select: none;
+}
+
+.CrossRefuse:hover {
+  color: red;
+}
+
+.CrossRefuse:active {
+  color: darkred;
+}
+
+.ButtonsWrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.ButtonsWrapper button {
+  margin-left: 25px;
+}
+
+.CompletedPosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

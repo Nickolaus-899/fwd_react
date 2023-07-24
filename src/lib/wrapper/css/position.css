@@ -1,132 +1,129 @@
 .GeneralFooterHeader {
-    position: absolute;
-    width: 100%!important;
-    height: 10vh;
+  position: absolute;
+  width: 100% !important;
+  height: 10vh;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
-    background-color: rgba(191, 128, 48, 0.29);
+  background-color: rgba(191, 128, 48, 0.29);
 }
 
 .PositionHeader {
-    top: 0;
+  top: 0;
 }
 
 .PositionFooter {
 }
 
 .InnoLogo {
-    color: #000;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: #000;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .NavWrapper {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
 
-    right: 20px;
+  right: 20px;
 }
 
 .NavItem {
-    width: 1.5625rem;
-    height: 1.5625rem;
-    margin-right: 15px;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-right: 15px;
 
-    transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
 }
 
 .NavItem:hover {
-    transform: translate(2px, -7px);
+  transform: translate(2px, -7px);
 }
 
 .ChevronWrapper {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
 
-    left: 10px;
+  left: 10px;
 }
 
 .ChevronItem {
-    /*width: 1.25rem;*/
-    /*height: 1.25rem;*/
+  /*width: 1.25rem;*/
+  /*height: 1.25rem;*/
 
-    transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
 }
 
 .ChevronItem:hover {
-    transform: translate(2px, -4px);
+  transform: translate(2px, -4px);
 }
 
-
 .FooterText {
-    position: absolute;
-    font-size: 20px;
-    font-style: normal;
-    /*font-weight: 400;*/
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
+  /*font-weight: 400;*/
 }
 
 .FooterText a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 
-    transition: font-weight 0.1s ease-in;
+  transition: font-weight 0.1s ease-in;
 }
 
 .FooterText a:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 .AboutUsLink {
-    right: 4rem;
+  right: 4rem;
 }
 
 .SomeText {
-    left: 3rem;
-    /*font-family: "Kaufmann BT", 'sans-serif';*/
-    font-size: 30px;
+  left: 3rem;
+  /*font-family: "Kaufmann BT", 'sans-serif';*/
+  font-size: 30px;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    user-select: none;
+  user-select: none;
 }
 
 .SomeText div {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .SomeText text {
+  color: rgba(0, 0, 0, 0);
 
-    color: rgba(0, 0, 0, 0);
-
-    user-select: none;
+  user-select: none;
 }
 
 .Secret1 {
-    margin-left: 5vw;
-    transition: color 0.6s ease-in;
+  margin-left: 5vw;
+  transition: color 0.6s ease-in;
 }
 
 .Secret2 {
-    transition: color 0.9s ease-in;
+  transition: color 0.9s ease-in;
 }
 
 .Secret3 {
-    transition: color 1.2s ease-in;
+  transition: color 1.2s ease-in;
 }
 
 .SomeText:hover text {
-    color: crimson;
+  color: crimson;
 }
 
 .SomeText text:hover {
-    color: rgba(0, 0, 0, 0)!important;
+  color: rgba(0, 0, 0, 0) !important;
 }
-

@@ -1,87 +1,85 @@
 // json-server -p 3001 --watch db.json
-export const fetchURL: string = 'http://localhost:3001'
-export const additionalURLPath: string = '/clients'
+export const fetchURL: string = "http://localhost:3001";
+export const additionalURLPath: string = "/clients";
 
 export interface Dish {
-    id: number,
-    title: string,
-    price: number,
-    calories: number,
-    vegetarian: boolean,
-    cuisine: string,
-    img: string,
-    link: string
+  id: number;
+  title: string;
+  price: number;
+  calories: number;
+  vegetarian: boolean;
+  cuisine: string;
+  img: string;
+  link: string;
 }
 
 export interface AdminInfo {
-    restaurant: string,
-    cuisine: string
+  restaurant: string;
+  cuisine: string;
 }
 
 export const nullAdminInfo: AdminInfo = {
-    restaurant: "",
-    cuisine: ""
-}
+  restaurant: "",
+  cuisine: "",
+};
 
 export interface Client {
-    id: number,
-    token: string,
-    email: string,
-    admin: boolean,
-    admin_info: AdminInfo,
-    dishes: Dish[]
+  id: number;
+  token: string;
+  email: string;
+  admin: boolean;
+  admin_info: AdminInfo;
+  dishes: Dish[];
 }
 
 export const nullDish: Dish = {
-    id: 0,
-    title: "dish",
-    price: 0,
-    calories: 0,
-    vegetarian: false,
-    cuisine: "",
-    img: "",
-    link: ""
-}
+  id: 0,
+  title: "dish",
+  price: 0,
+  calories: 0,
+  vegetarian: false,
+  cuisine: "",
+  img: "",
+  link: "",
+};
 
-export const emptyDishesArray: Dish[] = []
-export const emptyClientsArray: Client[] = []
+export const emptyDishesArray: Dish[] = [];
+export const emptyClientsArray: Client[] = [];
 
 export const nullClient: Client = {
-    id: 0,
-    token: "",
-    email: "",
-    admin: false,
-    admin_info: nullAdminInfo,
-    dishes: emptyDishesArray
-}
-
+  id: 0,
+  token: "",
+  email: "",
+  admin: false,
+  admin_info: nullAdminInfo,
+  dishes: emptyDishesArray,
+};
 
 export interface UserTokenInfo {
-    token: string,
-    name: string,
-    admin: boolean
+  token: string;
+  name: string;
+  admin: boolean;
 }
 
+export const addDishFormType: string = "add_dish";
+export const confirmationFormType: string = "confirm";
+export const addToMenuFormType: string = "add_to_menu";
+export const authFailedFormType: string = "auth_fail";
+export const authWasNotDoneFormType: string = "auth_not_done";
+export const differentPasswordsFormType: string = "different_passwords";
+export const authCompletedFormType: string = "auth_completed";
+export const logOutConfirmFormType: string = "log_out";
+export const deleteAccountFormType: string = "delete_acc";
+export const changePasswordFormType: string = "change_password";
 
-export const addDishFormType: string = 'add_dish'
-export const confirmationFormType: string = 'confirm'
-export const addToMenuFormType: string = 'add_to_menu'
-export const authFailedFormType: string = 'auth_fail'
-export const authWasNotDoneFormType: string = 'auth_not_done'
-export const differentPasswordsFormType: string = 'different_passwords'
-export const authCompletedFormType: string = 'auth_completed'
-export const logOutConfirmFormType: string = 'log_out'
-export const deleteAccountFormType: string = 'delete_acc'
-export const changePasswordFormType: string = 'change_password'
+export const nullFunction = () => {};
 
-export const nullFunction = () => {}
+export const userInfoKey: string = "userInfo";
 
-export const userInfoKey: string = "userInfo"
+export const timeForReloading: number = 1000;
 
-export const timeForReloading: number = 1000
+export const MIN_NAME_LENGTH: number = 4;
+export const MAX_NAME_LENGTH: number = 15;
 
-export const MIN_NAME_LENGTH: number = 4
-export const MAX_NAME_LENGTH: number = 15
-
-export const MIN_PASSWORD_LENGTH: number = 6
-export const MAX_PASSWORD_LENGTH: number = 20
+export const MIN_PASSWORD_LENGTH: number = 6;
+export const MAX_PASSWORD_LENGTH: number = 20;

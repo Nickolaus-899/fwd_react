@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "lint-staged": "prettier --plugin-search-dir . --write . && prettier --plugin-search-dir . --check . && eslint ."
   },
   "dependencies": {
     "@next/font": "^13.4.9",
@@ -25,5 +27,10 @@
     "react-router-dom": "^6.14.0",
     "styled-components": "^6.0.0-rc.6",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.0"
   }
 }

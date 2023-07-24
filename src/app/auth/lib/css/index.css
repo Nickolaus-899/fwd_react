@@ -1,22 +1,22 @@
 .AdminUserChoose {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .AdminUserChoose div {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .AdminUserChoose div h1 {
-    margin-left: 10vw;
-    width: 80vw;
+  margin-left: 10vw;
+  width: 80vw;
 }
 
 @media (min-width: 1000px) {
-    .AdminUserChoose div h1 {
-        margin-left: 0;
-        width: 100%;
-    }
+  .AdminUserChoose div h1 {
+    margin-left: 0;
+    width: 100%;
+  }
 }

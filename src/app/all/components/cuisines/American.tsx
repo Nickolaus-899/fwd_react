@@ -1,12 +1,12 @@
-import React from 'react';
-import {PiHamburger} from "react-icons/pi";
+import React from "react";
+import { PiHamburger } from "react-icons/pi";
 
 function American() {
-    return (
-        <a href="/all/American" className="CategoryItem">
-            <PiHamburger/>
-        </a>
-    )
+  return (
+    <a href="/all/American" className="CategoryItem">
+      <PiHamburger />
+    </a>
+  );
 }
 
-export default American
+export default American;

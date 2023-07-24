@@ -1,7 +1,7 @@
-import {fetchData} from "@/app/fetch";
-import {Client} from "@/app/classes";
+import { fetchData } from "@/app/fetch";
+import { Client } from "@/app/classes";
 
 export function fetchAdminData() {
-    const res: Promise<Client[]> = fetchData()
-    return res
+  const res: Promise<Client[]> = fetchData();
+  return res;
 }

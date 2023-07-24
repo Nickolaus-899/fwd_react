@@ -1,58 +1,55 @@
-
 h1 {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
 }
 
 .dish_header {
-    display: inline-block;
-    font-size: 20px;
-
+  display: inline-block;
+  font-size: 20px;
 }
 .calories {
-    font-size: 15px;
-    padding-right: 20px;
+  font-size: 15px;
+  padding-right: 20px;
 }
 .svg {
-    display: inline-block;
-    float: left;
+  display: inline-block;
+  float: left;
 }
 .dish1 {
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 190, 115, 0.50);
-    padding: 15px !important;
-    border-radius: 30px;
-    margin: 15px 255px !important;
-
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 190, 115, 0.5);
+  padding: 15px !important;
+  border-radius: 30px;
+  margin: 15px 255px !important;
 }
 .total {
-
-    display: flex;
-    align-items: center;
-    padding: 15px !important;
-    border-radius: 30px;
-    margin: 15px 255px !important;
+  display: flex;
+  align-items: center;
+  padding: 15px !important;
+  border-radius: 30px;
+  margin: 15px 255px !important;
 }
 .total h2 {
-    font-size: 20px;
+  font-size: 20px;
 }
-.margin-right{
-    margin-right: 15px;
+.margin-right {
+  margin-right: 15px;
 }
-.price{
-    float: right;
+.price {
+  float: right;
 }
-.price h2{
-    display: inline-block;
-    font-size: 20px;
+.price h2 {
+  display: inline-block;
+  font-size: 20px;
 }
-.inside{
-    margin-bottom: 20px;
+.inside {
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1000px) {
-    .total, .dish1 {
-        margin: 15px 25px !important;
-    }
+  .total,
+  .dish1 {
+    margin: 15px 25px !important;
+  }
 }

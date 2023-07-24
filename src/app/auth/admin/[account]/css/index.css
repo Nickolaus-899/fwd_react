@@ -1,83 +1,83 @@
 .AdmAccWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .HeaderFrom {
-    margin-top: -4vh;
+  margin-top: -4vh;
 }
 
 .HeaderCuisine {
-    margin-top: 3vh;
+  margin-top: 3vh;
 }
 
 .ButtonAddDishPosition {
-    margin-top: 4vh;
-    margin-bottom: 4vh;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
 }
 
 .FoodItemInList {
-    display: flex;
+  display: flex;
 }
 
 .FoodItemInListPosition {
-    /*flex-direction: column;*/
-    border: 0.5vw solid black;
-    width: 65vw;
+  /*flex-direction: column;*/
+  border: 0.5vw solid black;
+  width: 65vw;
 
-    margin-top: 20px;
+  margin-top: 20px;
 
-    padding: 3vw;
-    border-radius: 5vw;
+  padding: 3vw;
+  border-radius: 5vw;
 }
 
 .FoodItemInListInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
-    margin-left: 6vw;
+  margin-left: 6vw;
 }
 
 .FoodItemInListInfo h1 {
-    font-size: 3vw;
+  font-size: 3vw;
 }
 
 .FoodItemInListInfo div {
-    font-size: 2vw;
+  font-size: 2vw;
 }
 
 .FoodItemInListImage {
-    width: 30vw;
-    height: 100%;
+  width: 30vw;
+  height: 100%;
 
-    border-radius: 4vw;
+  border-radius: 4vw;
 }
 
 .VeggieText {
-    color: green;
-    font-weight: 700;
+  color: green;
+  font-weight: 700;
 }
 
 .CircleButtonPosition {
-    /*position: absolute;*/
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  /*position: absolute;*/
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .ButtonDeleteWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    margin-top: 15vh;
+  margin-top: 15vh;
 }
 
 .ButtonDeleteWrapper button {
-    margin-top: 5vh;
+  margin-top: 5vh;
 }

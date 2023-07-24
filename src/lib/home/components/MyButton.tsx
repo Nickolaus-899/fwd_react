@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import teller from '@/lib/home/images/teller.svg'
+import teller from "@/lib/home/images/teller.svg";
 
 function MyButton() {
-    return (
-        <button className="MyButton">
-            <div className="ButtonContentWrapper">
-                {/*<Image className="Teller" src={teller} alt={'teller'}/>*/}
-                <svg className="Teller" fill="#000000"
-                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408.113 408.113">
-                    <path d="M203.174,342.483c-76.33,0-138.429-62.097-138.429-138.424c0-76.33,62.099-138.429,138.429-138.429
+  return (
+    <button className="MyButton">
+      <div className="ButtonContentWrapper">
+        {/*<Image className="Teller" src={teller} alt={'teller'}/>*/}
+        <svg
+          className="Teller"
+          fill="#000000"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 408.113 408.113"
+        >
+          <path
+            d="M203.174,342.483c-76.33,0-138.429-62.097-138.429-138.424c0-76.33,62.099-138.429,138.429-138.429
 	c76.327,0,138.424,62.099,138.424,138.429C341.598,280.387,279.501,342.483,203.174,342.483z M203.174,75.63
 	c-70.815,0-128.429,57.613-128.429,128.429c0,70.813,57.613,128.424,128.429,128.424c70.813,0,128.424-57.611,128.424-128.424
 	C331.598,133.243,273.987,75.63,203.174,75.63z M35.277,336.753H21.132c-2.762,0-5-2.239-5-5V176.161
@@ -27,14 +32,12 @@ function MyButton() {
 	 M104.805,140.978c-0.894,0-1.799-0.239-2.615-0.742c-2.353-1.447-3.085-4.527-1.638-6.879
 	c16.541-26.879,47.096-41.172,48.388-41.767c2.509-1.156,5.479-0.059,6.634,2.45c1.154,2.507,0.059,5.475-2.447,6.631l0,0
 	c-0.289,0.134-29.134,13.675-44.059,37.927C108.123,140.133,106.483,140.978,104.805,140.978z"
-                    />
-                </svg>
-                <div>
-                    Order Now
-                </div>
-            </div>
-        </button>
-    )
+          />
+        </svg>
+        <div>Order Now</div>
+      </div>
+    </button>
+  );
 }
 
-export default MyButton
+export default MyButton;

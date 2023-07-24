@@ -1,156 +1,157 @@
 .bodyCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .registrationFormCard {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    width: calc(540px - 60px);
-    margin: 70px 0;
-    padding: 55px 30px 55px 30px;
+  width: calc(540px - 60px);
+  margin: 70px 0;
+  padding: 55px 30px 55px 30px;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .registrationForm {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
 
-    width: 100%;
+  width: 100%;
 }
 
 .input {
-    width: 100%;
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-    flex-wrap: nowrap;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .input label {
-    font-size: 16px;
-    font-weight: 600;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .input input {
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    outline: 1px solid #E1E6EF;
-    padding: 12px 18px 12px 18px;
-    transition: 50ms;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid #e1e6ef;
+  padding: 12px 18px 12px 18px;
+  transition: 50ms;
 }
 .input input:focus {
-    border: none;
-    box-shadow: none;
+  border: none;
+  box-shadow: none;
 }
 
 .login-screen-button {
-    width: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
-    font-size: 15px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    vertical-align: center;
-    background-color: rgba(191, 128, 48, 0.29);
-    border: none;
-    border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  vertical-align: center;
+  background-color: rgba(191, 128, 48, 0.29);
+  border: none;
+  border-radius: 5px;
 
-    /*transition: 100ms;*/
-    transition: background-color 0.3s ease-in;
+  /*transition: 100ms;*/
+  transition: background-color 0.3s ease-in;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .submit-buttons {
-    width: 100%;
-    margin-top: 20px;
+  width: 100%;
+  margin-top: 20px;
 }
-.userAccName Image, h1, h2 {
-    font-size: 25px;
-    vertical-align: middle;
-    line-height: normal;
-    display: inline-block;
-    text-align: center;
+.userAccName Image,
+h1,
+h2 {
+  font-size: 25px;
+  vertical-align: middle;
+  line-height: normal;
+  display: inline-block;
+  text-align: center;
 }
 .userAccName {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
-
-
 .login-screen-button:hover {
-    background-color: rgba(225, 132, 36, 0.83);;
+  background-color: rgba(225, 132, 36, 0.83);
 }
 
 .login-screen-button:active {
-    background-color: rgba(141, 97, 43, 0.29);;
+  background-color: rgba(141, 97, 43, 0.29);
 }
 
 .login-screen-left {
-    float: left;
+  float: left;
 }
 
-
-.login-screen-left:visited, .login-screen-left:link {
-    margin-top: 10px;
-    float: left;
-    font-size: 12px;
+.login-screen-left:visited,
+.login-screen-left:link {
+  margin-top: 10px;
+  float: left;
+  font-size: 12px;
 }
 
-.login-screen-left:hover, .login-screen-left:active {
-    text-decoration: underline;
+.login-screen-left:hover,
+.login-screen-left:active {
+  text-decoration: underline;
 }
 
-.login-screen-right:visited, .login-screen-right:link {
-    margin-top: 10px;
-    float: right;
-    font-size: 12px;
-
+.login-screen-right:visited,
+.login-screen-right:link {
+  margin-top: 10px;
+  float: right;
+  font-size: 12px;
 }
 
-.login-screen-right:hover, .login-screen-right:active {
-    text-decoration: underline;
+.login-screen-right:hover,
+.login-screen-right:active {
+  text-decoration: underline;
 }
-.login-screen-left, .login-screen-right{
-    color: #000000;
+.login-screen-left,
+.login-screen-right {
+  color: #000000;
 }
 
 .head h1 {
-    font-family: '__Kaushan_Script_096504', sans-serif;
-    height: 35px;
-    vertical-align: middle;
-    line-height: normal;
-    display: inline-block;
-
+  font-family: "__Kaushan_Script_096504", sans-serif;
+  height: 35px;
+  vertical-align: middle;
+  line-height: normal;
+  display: inline-block;
 }
 
 .AccountActionsButtonsWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    margin-top: 15vh;
+  margin-top: 15vh;
 }
 
 .AccountActionsButtonsWrapper button {
-    margin-top: 5vh;
+  margin-top: 5vh;
 }
