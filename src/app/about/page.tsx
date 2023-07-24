@@ -8,6 +8,10 @@ import dynamic from "next/dynamic";
 //     () => import('./components/AboutMain'),
 //     { ssr: false }
 // )
+export const metadata = {
+  title: "About Us",
+  description: "Page with Partners",
+};
 function Page() {
   return <AboutMain />;
 }

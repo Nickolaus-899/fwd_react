@@ -1,6 +1,10 @@
 import React from "react";
 import "./lib/css/index.css";
 
+export const metadata = {
+  title: "Authentication",
+  description: "Page with authentication choosing",
+};
 function Page() {
   return (
     <div className="AdminUserChoose">

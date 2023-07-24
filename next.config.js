@@ -4,7 +4,7 @@ const nextConfig = {
     domains: [""],
     formats: ["image/avif", "image/webp"],
   },
-  distDir: "build"
+  distDir: "build",
 };
 
 module.exports = nextConfig;
