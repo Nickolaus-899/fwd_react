@@ -11,7 +11,7 @@ import {
   differentPasswordsFormType,
   nullAdminInfo,
   nullDish,
-  nullFunction,
+  nullFunction, userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
 import { encodeName } from "@/app/enigma";
@@ -67,7 +67,7 @@ function Page() {
       name: name,
       admin: false,
     };
-    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+    localStorage.setItem(userInfoKey, JSON.stringify(userInfo));
     openCompletedHandler();
   }
 

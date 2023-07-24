@@ -1,5 +1,5 @@
 import React, { JSX } from "react";
-import { UserTokenInfo } from "@/app/classes";
+import {userInfoKey, UserTokenInfo} from "@/app/classes";
 import { fetchData } from "@/app/fetch";
 
 const AuthWasCompletedForm: ({
@@ -7,11 +7,11 @@ const AuthWasCompletedForm: ({
 }: {
   closeFormHandler: Function;
 }) => JSX.Element = ({ closeFormHandler }) => {
-  let check = localStorage.getItem("userInfo");
+  let check = localStorage.getItem(userInfoKey);
   let link: string = "/auth";
   if (check) {
     let userToken: UserTokenInfo = JSON.parse(
-      localStorage.getItem("userInfo") as string
+      localStorage.getItem(userInfoKey) as string
     );
     link = `/auth/${userToken.admin ? "admin" : "user"}/${userToken.token}`;
   } else {

@@ -40,7 +40,7 @@ function Page({ params }: { params: { account: string } }) {
   };
 
   const logOut = () => {
-    localStorage.removeItem("userInfo");
+    localStorage.removeItem(userInfoKey);
   };
 
   const deleteAcc = () => {

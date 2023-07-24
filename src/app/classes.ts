@@ -1,6 +1,7 @@
 // json-server -p 3001 --watch db.json
-export const fetchURL: string = "http://localhost:3001";
-export const additionalURLPath: string = "/clients";
+
+// export const fetchURL: string = "http://localhost:3001";
+// export const additionalURLPath: string = "/clients";
 
 export interface Dish {
   id: number;
@@ -83,3 +84,6 @@ export const MAX_NAME_LENGTH: number = 15;
 
 export const MIN_PASSWORD_LENGTH: number = 6;
 export const MAX_PASSWORD_LENGTH: number = 20;
+
+
+export const additionalBasePath: string = ""

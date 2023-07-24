@@ -9,17 +9,17 @@ import person from "@/lib/wrapper/images/person-check.svg";
 import Image from "next/image";
 
 import { BiHomeAlt2 } from "react-icons/bi";
-import { UserTokenInfo } from "@/app/classes";
+import {userInfoKey, UserTokenInfo} from "@/app/classes";
 
 const NavigationButtons: ({}: {}) => JSX.Element = ({}) => {
   const [link, setLink] = useState("/auth");
   const [myMenu, setMyMenu] = useState("/auth");
 
   useEffect(() => {
-    const check = localStorage.getItem("userInfo");
+    const check = localStorage.getItem(userInfoKey);
     if (check) {
       const userInfo: UserTokenInfo = JSON.parse(
-        localStorage.getItem("userInfo") as string
+        localStorage.getItem(userInfoKey) as string
       );
       setLink(`/auth/${userInfo.admin ? "admin" : "user"}/${userInfo.token}`);
       setMyMenu(`${userInfo.admin ? `/auth/admin/${userInfo.token}` : "/my"}`);

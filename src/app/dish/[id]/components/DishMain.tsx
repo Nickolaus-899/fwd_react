@@ -6,7 +6,7 @@ import {
   nullClient,
   nullDish,
   nullFunction,
-  timeForReloading,
+  timeForReloading, userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
 import FoodPicture from "@/lib/home/components/FoodPicture";
@@ -30,10 +30,10 @@ function DishMain({ params }: { params: { id: string } }) {
   const [showAuthForm, setShowAuthForm] = useState(false);
 
   async function updateClient() {
-    let check = localStorage.getItem("userInfo");
+    let check = localStorage.getItem(userInfoKey);
     if (check) {
       let userToken: UserTokenInfo = JSON.parse(
-        localStorage.getItem("userInfo") as string
+        localStorage.getItem(userInfoKey) as string
       );
       setUserTokeName(userToken.token);
       await fetchData().then((clients) => {
@@ -48,7 +48,7 @@ function DishMain({ params }: { params: { id: string } }) {
   }
 
   async function openFormHandler() {
-    let check = localStorage.getItem("userInfo");
+    let check = localStorage.getItem(userInfoKey);
 
     if (check) {
       await fetchData().then((clients) => {

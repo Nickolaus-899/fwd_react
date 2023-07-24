@@ -9,7 +9,7 @@ import {
   authCompletedFormType,
   authFailedFormType,
   nullDish,
-  nullFunction,
+  nullFunction, userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
 import GeneralForm from "@/lib/form/GeneralForm";
@@ -32,7 +32,7 @@ function AdminMain() {
             name: name,
             admin: true,
           };
-          localStorage.setItem("userInfo", JSON.stringify(userInfo));
+          localStorage.setItem(userInfoKey, JSON.stringify(userInfo));
           openCompletedHandler();
           return;
         }

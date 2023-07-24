@@ -11,7 +11,7 @@ import {
   differentPasswordsFormType,
   nullAdminInfo,
   nullDish,
-  nullFunction,
+  nullFunction, userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
 import moment from "moment/moment";
@@ -35,7 +35,7 @@ function AuthMain() {
             name: name,
             admin: false,
           };
-          localStorage.setItem("userInfo", JSON.stringify(userInfo));
+          localStorage.setItem(userInfoKey, JSON.stringify(userInfo));
           openCompletedHandler();
           return;
         }

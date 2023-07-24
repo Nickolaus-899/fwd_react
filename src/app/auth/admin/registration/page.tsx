@@ -12,7 +12,7 @@ import {
   differentPasswordsFormType,
   nullAdminInfo,
   nullDish,
-  nullFunction,
+  nullFunction, userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
 import moment from "moment/moment";
@@ -72,7 +72,7 @@ function Page() {
       name: name,
       admin: true,
     };
-    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+    localStorage.setItem(userInfoKey, JSON.stringify(userInfo));
     openCompletedHandler();
   }
 
