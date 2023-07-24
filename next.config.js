@@ -3,7 +3,8 @@ const nextConfig = {
     images: {
         domains: [''],
         formats: ['image/avif', "image/webp"]
-    }
+    },
+    distDir: 'build'
 }
 
 module.exports = nextConfig
