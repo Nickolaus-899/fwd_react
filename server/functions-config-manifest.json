@@ -1,0 +1,14 @@
+{
+  "/about": {},
+  "/all/[cuisine]": {},
+  "/auth/admin/[account]": {},
+  "/auth/admin": {},
+  "/auth/admin/registration": {},
+  "/auth": {},
+  "/auth/user/[account]": {},
+  "/auth/user": {},
+  "/auth/user/registration": {},
+  "/dish/[id]": {},
+  "/my": {},
+  "/": {}
+}

@@ -1,0 +1,16 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/auth/page": "app/auth/page.js",
+  "/my/page": "app/my/page.js",
+  "/all/page": "app/all/page.js",
+  "/auth/admin/page": "app/auth/admin/page.js",
+  "/auth/user/page": "app/auth/user/page.js",
+  "/dish/[id]/page": "app/dish/[id]/page.js",
+  "/auth/admin/[account]/page": "app/auth/admin/[account]/page.js",
+  "/all/[cuisine]/page": "app/all/[cuisine]/page.js",
+  "/auth/admin/registration/page": "app/auth/admin/registration/page.js",
+  "/auth/user/[account]/page": "app/auth/user/[account]/page.js",
+  "/auth/user/registration/page": "app/auth/user/registration/page.js"
+}
