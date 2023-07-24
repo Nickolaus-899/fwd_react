@@ -18,19 +18,19 @@ jobs:
       - name: Setup Node.js v16
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: "16"
       - name: Install dependencies
         run: npm install
       - name: Lint
         run: npm run lint
-#      - name: Check
-#        run: npm run check
+      #      - name: Check
+      #        run: npm run check
       - name: Build website
         run: npm run build
       - name: Artifacts
         uses: actions/upload-pages-artifact@v1
         with:
-          path: 'build/'
+          path: "build/"
 
   deploy:
     name: Deploy
