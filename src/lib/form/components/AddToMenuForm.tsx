@@ -1,5 +1,4 @@
 import React, {JSX} from 'react'
-import {timeForReloading} from "@/app/classes";
 
 const AddToMenuForm: ({
                           addToMenuHandler,
