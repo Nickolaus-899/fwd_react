@@ -1,6 +1,6 @@
 import React, {JSX} from 'react'
 import {Dish} from "@/app/classes";
-// import Image from "next/image";
+import Image from "next/image";
 
 const FoodItemInList: ({dish, openConfirmPageHandler} :
                            {dish: Dish, openConfirmPageHandler: Function})
@@ -12,7 +12,14 @@ const FoodItemInList: ({dish, openConfirmPageHandler} :
             </div>
 
             <div className="FoodItemInList">
-                <img className="FoodItemInListImage" src={dish.img} alt={dish.title} height={300} width={300}/>
+                <Image
+                    loader={() => dish.img}
+                    className="FoodItemInListImage"
+                    src={dish.img}
+                    alt={dish.title}
+                    height={300}
+                    width={300}
+                />
                 <div className="FoodItemInListInfo">
                     <h1>{dish.title}</h1>
                     {/*<div>id: {dish.id}</div>*/}
