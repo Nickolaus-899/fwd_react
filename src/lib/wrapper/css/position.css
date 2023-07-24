@@ -70,7 +70,7 @@
     position: absolute;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    /*font-weight: 400;*/
 }
 
 .FooterText a {
@@ -89,7 +89,7 @@
 
 .SomeText {
     left: 3rem;
-    font-family: "Kaufmann BT", 'sans-serif';
+    /*font-family: "Kaufmann BT", 'sans-serif';*/
     font-size: 30px;
 
     display: flex;
