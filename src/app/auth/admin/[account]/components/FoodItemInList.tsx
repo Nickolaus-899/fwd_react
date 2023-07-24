@@ -13,6 +13,7 @@ const FoodItemInList: ({dish, openConfirmPageHandler} :
 
             <div className="FoodItemInList">
                 <Image
+                    unoptimized={true}
                     loader={() => dish.img}
                     className="FoodItemInListImage"
                     src={dish.img}

@@ -39,7 +39,15 @@ const FoodItemInMenu: ({dish, client} : {dish: Dish, client: Client }) => JSX.El
             }
             <div className="dish1 row">
                 <div className="col-md-3">
-                    <Image loader={() => dish.img} className='svg' width={140} height={82.5} src={dish.img} alt={"food"}/>
+                    <Image
+                        unoptimized={true}
+                        loader={() => dish.img}
+                        className='svg'
+                        width={140}
+                        height={82.5}
+                        src={dish.img}
+                        alt={"food"}
+                    />
                 </div>
                 <div className="col-md-6">
                     <h2 className="dish_header">{dish.title}</h2>

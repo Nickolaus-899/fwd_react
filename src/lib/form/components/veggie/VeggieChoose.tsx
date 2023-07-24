@@ -12,7 +12,7 @@ const VeggieChoose: ({changeEventHandler} : {changeEventHandler: Function})
 
     useEffect(() => {
         changeEventHandler(yes, 'vegetarian')
-    }, [yes])
+    }, [yes]) // eslint-disable-line react-hooks/exhaustive-deps
     return (
         <div className="VeggieChooseWrapper">
             <a onClick={() => {

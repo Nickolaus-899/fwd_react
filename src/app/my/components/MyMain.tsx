@@ -58,33 +58,32 @@ function MyMain() {
     //     myArray = [...myArray, dish]
     // }
 
-    async function loadData() {
-        let check = localStorage.getItem(userInfoKey)
-        if (check) {
-            let token: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
-            await loadClient(token.token)
-        } else {
-            setOpenAuthWasNotDoneForm(true)
-        }
-    }
-
-    function loadDishes() {
-        setMyArray(emptyDishesArray)
-        setTotalPrice(0)
-        setTotalCalories(0)
-
-        for (let i = 0; i < client.dishes.length; i++) {
-            setMyArray(prevState => [...prevState, client.dishes[i]])
-            setTotalCalories(prevState => prevState + parseInt(client.dishes[i].calories.toString()))
-            setTotalPrice(prevState => prevState + parseInt(client.dishes[i].price.toString()))
-        }
-    }
-
     useEffect(() => {
+        async function loadData() {
+            let check = localStorage.getItem(userInfoKey)
+            if (check) {
+                let token: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
+                await loadClient(token.token)
+            } else {
+                setOpenAuthWasNotDoneForm(true)
+            }
+        }
         loadData()
     }, [])
 
     useEffect(() => {
+        function loadDishes() {
+            setMyArray(emptyDishesArray)
+            setTotalPrice(0)
+            setTotalCalories(0)
+
+            for (let i = 0; i < client.dishes.length; i++) {
+                setMyArray(prevState => [...prevState, client.dishes[i]])
+                setTotalCalories(prevState => prevState + parseInt(client.dishes[i].calories.toString()))
+                setTotalPrice(prevState => prevState + parseInt(client.dishes[i].price.toString()))
+            }
+        }
+
         loadDishes()
     }, [client])
 

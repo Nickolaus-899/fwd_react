@@ -24,26 +24,6 @@ function Page({params} : {params : {account: string}}) {
     const [isLogOutForm, setLogOutForm] = useState(false)
     const [isDeleteAccForm, setDeleteAccForm] = useState(false)
 
-    async function loadClient() {
-        fetchData().then(clients => {
-            for (let i = 0; i < clients.length; i++) {
-                if (clients[i].token === params.account) {
-                    setClient(clients[i])
-                    break
-                }
-            }
-        })
-
-        let check = localStorage.getItem(userInfoKey)
-        if (check) {
-            let token: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
-            setUserName(token.name)
-        } else {
-            console.log('User is not authorized')
-        }
-    }
-
-
     const closeAccForm = () => {
         setDeleteAccForm(false)
     }
@@ -74,8 +54,27 @@ function Page({params} : {params : {account: string}}) {
     }
 
     useEffect(() => {
+        async function loadClient() {
+            fetchData().then(clients => {
+                for (let i = 0; i < clients.length; i++) {
+                    if (clients[i].token === params.account) {
+                        setClient(clients[i])
+                        break
+                    }
+                }
+            })
+
+            let check = localStorage.getItem(userInfoKey)
+            if (check) {
+                let token: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
+                setUserName(token.name)
+            } else {
+                console.log('User is not authorized')
+            }
+        }
+
         loadClient()
-    }, [])
+    }, [params.account])
     return (
         <div>
             {

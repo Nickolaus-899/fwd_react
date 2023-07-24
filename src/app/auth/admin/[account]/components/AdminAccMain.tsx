@@ -33,11 +33,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
             }
         }
     }
-    async function fetchHandler() {
-        await fetchAdminData().then(clients => {
-            findClient(clients)
-        })
-    }
+
 
     async function addDishHandler(dish: Dish) {
         await addDish(client, dish)
@@ -120,6 +116,15 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
     }
 
     useEffect(() => {
+        async function fetchHandler() {
+            await fetchAdminData().then(clients => {
+                for (let i = 0; i < clients.length; i++) {
+                    if (clients[i].token === name) {
+                        setClient(clients[i])
+                    }
+                }
+            })
+        }
         fetchHandler().then(r => r)
     }, [name])
     return (

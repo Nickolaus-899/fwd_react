@@ -52,17 +52,33 @@
     overflow-wrap: break-word;
 }
 
+
 .InputCustom div:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 
     /*min-width: 100px;*/
 
-    width: 100px;
+    /*width: 100px;*/
 
     margin-right: 20px;
+}
+
+@media (min-width: 1000px) {
+    .InputCustom div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+
+        /*min-width: 100px;*/
+
+        width: 100px;
+
+        margin-right: 20px;
+    }
 }
 
 .WhiteColorForInputText {

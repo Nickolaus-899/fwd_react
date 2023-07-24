@@ -5,7 +5,7 @@ const FoodPicture: ({food} : {food:string}) => JSX.Element = ({food}) => {
 
     return (
         <div className="FoodWrapper">
-            <Image loader={() => food} src={food} alt={"food"} className="FoodItem"/>
+            <Image unoptimized={true} loader={() => food} src={food} alt={"food"} className="FoodItem" width={100} height={100}/>
         </div>
     )
 }

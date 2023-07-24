@@ -89,29 +89,31 @@ function DishMain({params} : {params : {id: string}}) {
         setShowAuthForm(false)
     }
 
-    const fetchDetails = async () => {
-        fetchData().then(clients => {
-            let applyBreak = false
-            for (let i = 0; i < clients.length; i++) {
-                if (applyBreak) {
-                    break
-                }
-                if (!clients[i].admin) {
-                    continue
-                }
-                for (let j = 0; j < clients[i].dishes.length; j++) {
-                    if (clients[i].dishes[j].id.toString() === params.id) {
-                        setDetails(clients[i].dishes[j])
-                        setRestaurantName(clients[i].admin_info.restaurant)
-                        applyBreak = true
-                        break
-                    }
-                }
-            }
-        })
-    };
+
 
     useEffect(() => {
+        const fetchDetails = async () => {
+            fetchData().then(clients => {
+                let applyBreak = false
+                for (let i = 0; i < clients.length; i++) {
+                    if (applyBreak) {
+                        break
+                    }
+                    if (!clients[i].admin) {
+                        continue
+                    }
+                    for (let j = 0; j < clients[i].dishes.length; j++) {
+                        if (clients[i].dishes[j].id.toString() === params.id) {
+                            setDetails(clients[i].dishes[j])
+                            setRestaurantName(clients[i].admin_info.restaurant)
+                            applyBreak = true
+                            break
+                        }
+                    }
+                }
+            })
+        };
+
         fetchDetails();
         updateClient();
     }, [params.id]);

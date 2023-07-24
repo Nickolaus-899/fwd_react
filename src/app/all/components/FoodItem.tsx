@@ -7,6 +7,7 @@ const FoodItem: ({recipe} : {recipe: Dish}) => JSX.Element = ({recipe}) => {
         <a href={"/dish/" + recipe.id} className="DecorLink">
             <div className="PopularItem">
                 <Image
+                    unoptimized={true}
                     loader={() => recipe.img}
                     className="PopularItemImg"
                     src={recipe.img}

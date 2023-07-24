@@ -10,33 +10,34 @@ const CUISINE_NUMBER: number = 12
 function CuisineMain({params} : {params : {cuisine: string}}) {
     const [cuisine, setCuisine] = useState(emptyDishesArray);
 
-    const getCuisine = async (name: string) => {
-        let cuisineCounter: number = 0
-        fetchData().then(clients => {
-            let applyBreak = false
-            for (let i = 0; i < clients.length; i++) {
-                if (applyBreak) {
-                    break
-                }
-                if (!clients[i].admin) {
-                    continue
-                }
-                for (let j = 0; j < clients[i].dishes.length; j++) {
-                    if (cuisineCounter === CUISINE_NUMBER) {
-                        applyBreak = true
-                        break
-                    }
-                    if (clients[i].dishes[j].cuisine === params.cuisine) {
-                        setCuisine(prevState => [...prevState, clients[i].dishes[j]])
-                        cuisineCounter = cuisineCounter + 1
-                    }
-                }
-            }
-        })
-    };
-
 
     useEffect(() => {
+        const getCuisine = async (name: string) => {
+            let cuisineCounter: number = 0
+            fetchData().then(clients => {
+                let applyBreak = false
+                for (let i = 0; i < clients.length; i++) {
+                    if (applyBreak) {
+                        break
+                    }
+                    if (!clients[i].admin) {
+                        continue
+                    }
+                    for (let j = 0; j < clients[i].dishes.length; j++) {
+                        if (cuisineCounter === CUISINE_NUMBER) {
+                            applyBreak = true
+                            break
+                        }
+                        if (clients[i].dishes[j].cuisine === params.cuisine) {
+                            setCuisine(prevState => [...prevState, clients[i].dishes[j]])
+                            cuisineCounter = cuisineCounter + 1
+                        }
+                    }
+                }
+            })
+        };
+
+
         setCuisine(emptyDishesArray)
         getCuisine(params.cuisine);
     }, [params.cuisine]);
