@@ -1,5 +1,5 @@
 import React, { JSX } from "react";
-import {userInfoKey, UserTokenInfo} from "@/app/classes";
+import { userInfoKey, UserTokenInfo } from "@/app/classes";
 import { fetchData } from "@/app/fetch";
 
 const AuthWasCompletedForm: ({

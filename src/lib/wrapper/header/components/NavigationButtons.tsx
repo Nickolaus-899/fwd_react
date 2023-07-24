@@ -9,7 +9,7 @@ import person from "@/lib/wrapper/images/person-check.svg";
 import Image from "next/image";
 
 import { BiHomeAlt2 } from "react-icons/bi";
-import {userInfoKey, UserTokenInfo} from "@/app/classes";
+import { userInfoKey, UserTokenInfo } from "@/app/classes";
 
 const NavigationButtons: ({}: {}) => JSX.Element = ({}) => {
   const [link, setLink] = useState("/auth");

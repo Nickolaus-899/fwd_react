@@ -85,5 +85,4 @@ export const MAX_NAME_LENGTH: number = 15;
 export const MIN_PASSWORD_LENGTH: number = 6;
 export const MAX_PASSWORD_LENGTH: number = 20;
 
-
-export const additionalBasePath: string = ""
+export const additionalBasePath: string = "";

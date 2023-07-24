@@ -12,7 +12,8 @@ import {
   nullClient,
   nullDish,
   nullFunction,
-  timeForReloading, userInfoKey,
+  timeForReloading,
+  userInfoKey,
 } from "@/app/classes";
 import FoodItemInList from "@/app/auth/admin/[account]/components/FoodItemInList";
 import { addDish, deleteDish, removeClient } from "@/app/fetch";

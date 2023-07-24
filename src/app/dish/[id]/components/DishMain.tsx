@@ -6,7 +6,8 @@ import {
   nullClient,
   nullDish,
   nullFunction,
-  timeForReloading, userInfoKey,
+  timeForReloading,
+  userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
 import FoodPicture from "@/lib/home/components/FoodPicture";

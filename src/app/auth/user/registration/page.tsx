@@ -11,7 +11,8 @@ import {
   differentPasswordsFormType,
   nullAdminInfo,
   nullDish,
-  nullFunction, userInfoKey,
+  nullFunction,
+  userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
 import { encodeName } from "@/app/enigma";

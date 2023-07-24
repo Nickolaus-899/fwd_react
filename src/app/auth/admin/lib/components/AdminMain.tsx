@@ -9,7 +9,8 @@ import {
   authCompletedFormType,
   authFailedFormType,
   nullDish,
-  nullFunction, userInfoKey,
+  nullFunction,
+  userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
 import GeneralForm from "@/lib/form/GeneralForm";
