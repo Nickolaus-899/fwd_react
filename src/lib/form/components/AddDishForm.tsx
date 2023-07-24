@@ -48,7 +48,7 @@ const AddDishForm: ({
             </div>
             <div className="InputCustom">
                 <div className="WhiteColorForInputText">Is it vegetarian?</div>
-                <VeggieChoose changeEventHandler={changeEventHandler}/>
+                <VeggieChoose dish={dish}/>
             </div>
             <div className="InputCustom">
                 <div className="WhiteColorForInputText">Cuisine:</div>

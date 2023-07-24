@@ -2,17 +2,18 @@
 import React, {JSX, useEffect, useState} from 'react'
 import CheckMark from "@/lib/form/components/veggie/CheckMark";
 import CrossRefuse from "@/lib/form/components/veggie/CrossRefuse";
-import styled from "styled-components";
+import {Dish} from "@/app/classes";
 
-const VeggieChoose: ({changeEventHandler} : {changeEventHandler: Function})
-    => JSX.Element = ({changeEventHandler}) => {
+const VeggieChoose: ({dish} : {dish: Dish})
+    => JSX.Element = ({dish}) => {
     const [isPressed, setPressed] = useState(false)
     const [yes, setYes] = useState(false)
     const [no, setNo] = useState(false)
 
     useEffect(() => {
-        changeEventHandler(yes, 'vegetarian')
-    }, [yes]) // eslint-disable-line react-hooks/exhaustive-deps
+        // changeEventHandler(yes, 'vegetarian')
+        dish.vegetarian = yes
+    }, [yes, dish])
     return (
         <div className="VeggieChooseWrapper">
             <a onClick={() => {
