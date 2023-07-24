@@ -13,7 +13,7 @@ import {
     nullDish,
     nullFunction, UserTokenInfo
 } from "@/app/classes";
-import {encodeName, decodeToken} from "@/app/enigma"
+import {encodeName} from "@/app/enigma"
 import {addClient, fetchData} from "@/app/fetch";
 import moment from "moment";
 

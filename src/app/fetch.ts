@@ -1,6 +1,7 @@
-import {Client, Dish} from "@/app/classes";
+import {Client, Dish, userInfoKey, UserTokenInfo} from "@/app/classes";
 import moment from "moment";
-import {addDishDB, getClientsDB, removeClientDB, removeDishDB, setNewClientDB} from "@/app/Firebase";
+import {addDishDB, changePasswordDB, getClientsDB, removeClientDB, removeDishDB, setNewClientDB} from "@/app/Firebase";
+import {encodeName} from "@/app/enigma";
 
 export async function fetchData(): Promise<Client[]> {
     console.log("Fetching data...")
@@ -75,5 +76,24 @@ export async function removeClient(client: Client) {
     // }
 
     const res = await removeClientDB(client)
+    return res as Client[]
+}
+
+export async function changePassword(newPassword: string) {
+    console.log("Changing password...")
+    const user: UserTokenInfo = JSON.parse(localStorage.getItem(userInfoKey) as string)
+
+
+    const newToken: string = encodeName(user.name, newPassword)
+
+    const res = await changePasswordDB(user.token, newToken)
+
+
+    const userNewInfo: UserTokenInfo = {
+        token: newToken,
+        name: user.name,
+        admin: user.admin
+    }
+    localStorage.setItem(userInfoKey, JSON.stringify(userNewInfo))
     return res as Client[]
 }

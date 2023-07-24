@@ -2,7 +2,7 @@
 import React, {JSX, useEffect, useState} from 'react'
 import {fetchAdminData} from "@/app/auth/admin/[account]/fetchAdminData";
 import {
-    addDishFormType,
+    addDishFormType, changePasswordFormType,
     Client,
     confirmationFormType, deleteAccountFormType,
     Dish,
@@ -24,6 +24,7 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
     const [isConfirmForm, setConfirmForm] = useState(false)
     const [isLogOutForm, setLogOutForm] = useState(false)
     const [isDeleteAccForm, setDeleteAccForm] = useState(false)
+    const [isChangePassword, setIsChangePassword] = useState(false)
 
     function findClient(clients: Client[]) {
         for (let i = 0; i < clients.length; i++) {
@@ -114,6 +115,10 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
         logOut()
     }
 
+    const closeChangeForm = () => {
+        setIsChangePassword(false)
+    }
+
     useEffect(() => {
         fetchHandler().then(r => r)
     }, [name])
@@ -175,6 +180,20 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                     />
                 ) : null
             }
+            {
+                isChangePassword ? (
+                    <GeneralForm
+                        type={changePasswordFormType}
+                        setIsOpenForm={setIsChangePassword}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeChangeForm}
+                        deleteHandler={nullFunction}
+                        dish={nullDish}
+                        addToMenuHandler={nullFunction}
+                    />
+                ) : null
+            }
             <div className="AdmAccWrapper">
                 {/*<button className="MyButton" onClick={fetchHandler}>Click Me!</button>*/}
                 <button className="MyButton ButtonAddDishPosition" onClick={() => openCreationDishPageHandler()}>
@@ -191,6 +210,9 @@ const AdminAccMain: ({name} : {name: string}) => JSX.Element = ({name}) => {
                 }
 
                 <div className="ButtonDeleteWrapper">
+                    <button className="MyButton" onClick={() => (setIsChangePassword(true))}>
+                        Change Password
+                    </button>
                     <button className="MyButton" onClick={() => openLogOutFormHandler()}>
                         Log Out
                     </button>

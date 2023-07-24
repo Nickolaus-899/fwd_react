@@ -90,3 +90,19 @@ export async function removeClientDB(client: Client) {
     return await getClientsDB()
 }
 
+export async function changePasswordDB(oldToken: string, newToken: string) {
+    let clientsDocs = await getClientsDocs()
+    let condition = true
+    clientsDocs.map(item => {
+        if (condition && item.data().token === oldToken) {
+            condition = false
+
+            updateDoc(item.ref, {
+                token: newToken
+            })
+        }
+    })
+
+    return await getClientsDB()
+}
+

@@ -1,6 +1,7 @@
 "use client"
 import React, {useEffect, useState} from 'react'
 import {
+    changePasswordFormType,
     deleteAccountFormType,
     logOutConfirmFormType,
     nullClient,
@@ -17,9 +18,9 @@ import GeneralForm from "@/lib/form/GeneralForm";
 function Page({params} : {params : {account: string}}) {
     const [client, setClient] = useState(nullClient)
     const [userName, setUserName] = useState("")
-    const [userEmail, setUserEmail] = useState("")
 
 
+    const [isChangePassword, setIsChangePassword] = useState(false)
     const [isLogOutForm, setLogOutForm] = useState(false)
     const [isDeleteAccForm, setDeleteAccForm] = useState(false)
 
@@ -68,6 +69,10 @@ function Page({params} : {params : {account: string}}) {
         logOut()
     }
 
+    const closeChangeForm = () => {
+        setIsChangePassword(false)
+    }
+
     useEffect(() => {
         loadClient()
     }, [])
@@ -101,6 +106,20 @@ function Page({params} : {params : {account: string}}) {
                     />
                 ) : null
             }
+            {
+                isChangePassword ? (
+                    <GeneralForm
+                        type={changePasswordFormType}
+                        setIsOpenForm={setIsChangePassword}
+                        changeEventHandler={nullFunction}
+                        createDishHandler={nullFunction}
+                        closeFormHandler={closeChangeForm}
+                        deleteHandler={nullFunction}
+                        dish={nullDish}
+                        addToMenuHandler={nullFunction}
+                    />
+                ) : null
+            }
 
             <div className="userAccName row">
                 <Image src={icon} alt="userAccFoto" width={250} height={250}></Image>
@@ -115,6 +134,9 @@ function Page({params} : {params : {account: string}}) {
             </div>
 
             <div className="AccountActionsButtonsWrapper">
+                <button className="MyButton" onClick={() => setIsChangePassword(true)}>
+                    Change Password
+                </button>
                 <button className="MyButton" onClick={() => openLogOutFormHandler()}>
                     Log Out
                 </button>

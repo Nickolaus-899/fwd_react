@@ -72,6 +72,7 @@ export const differentPasswordsFormType: string = 'different_passwords'
 export const authCompletedFormType: string = 'auth_completed'
 export const logOutConfirmFormType: string = 'log_out'
 export const deleteAccountFormType: string = 'delete_acc'
+export const changePasswordFormType: string = 'change_password'
 
 export const nullFunction = () => {}
 
@@ -81,3 +82,6 @@ export const timeForReloading: number = 1000
 
 export const MIN_NAME_LENGTH: number = 4
 export const MAX_NAME_LENGTH: number = 15
+
+export const MIN_PASSWORD_LENGTH: number = 6
+export const MAX_PASSWORD_LENGTH: number = 20

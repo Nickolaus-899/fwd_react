@@ -4,7 +4,7 @@ import {
     addDishFormType,
     addToMenuFormType, authCompletedFormType,
     authFailedFormType,
-    authWasNotDoneFormType,
+    authWasNotDoneFormType, changePasswordFormType,
     confirmationFormType, deleteAccountFormType, differentPasswordsFormType,
     Dish, logOutConfirmFormType
 } from "@/app/classes";
@@ -17,6 +17,7 @@ import DifferentPasswordsForm from "@/lib/form/components/DifferentPasswordsForm
 import AuthWasCompletedForm from "@/lib/form/components/AuthWasCompletedForm";
 import LogOutForm from "@/lib/form/components/LogOutForm";
 import DeleteAccForm from "@/lib/form/components/DeleteAccForm";
+import ChangePasswordForm from "@/lib/form/components/ChangePasswordForm";
 
 const GeneralForm: ({
                         type,
@@ -103,6 +104,11 @@ const GeneralForm: ({
                 {
                     type === deleteAccountFormType ? (
                         <DeleteAccForm closeFormHandler={closeFormHandler} deleteAccHandler={deleteHandler}/>
+                    ) : null
+                }
+                {
+                    type === changePasswordFormType ? (
+                        <ChangePasswordForm closeFormHandler={closeFormHandler}/>
                     ) : null
                 }
             </div>
