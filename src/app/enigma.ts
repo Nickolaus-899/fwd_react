@@ -1,4 +1,4 @@
-import {MAX_NAME_LENGTH, MIN_NAME_LENGTH} from "@/app/classes";
+import { MAX_NAME_LENGTH, MIN_NAME_LENGTH } from "@/app/classes";
 
 function toHex(value: number) {
   let res = "";
@@ -70,10 +70,10 @@ export function validationInput() {
     errorMessageElement.style.fontSize = "12px";
     errorMessageElement.style.color = "red";
     errorMessageElement.innerHTML =
-        "Password should contain at least 1 special symbol, <br>" +
-        "1 letter is uppercase,<br>" +
-        "1 number and <br>" +
-        "Minimal length is 6 chars!";
+      "Password should contain at least 1 special symbol, <br>" +
+      "1 letter is uppercase,<br>" +
+      "1 number and <br>" +
+      "Minimal length is 6 chars!";
 
     parentNode.appendChild(errorMessageElement);
   } else {
@@ -86,7 +86,7 @@ export function validationInput() {
 export function matchingPasswords() {
   const passwordInput = document.getElementById("password") as HTMLInputElement;
   const cpasswordInput = document.getElementById(
-      "cpassword"
+    "cpassword"
   ) as HTMLInputElement;
   const parentNode = cpasswordInput.parentNode as HTMLElement;
 

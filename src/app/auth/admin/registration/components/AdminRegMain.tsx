@@ -3,7 +3,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import icon from "@/app/auth/user/lib/images/fork-and-knife.svg";
 import "@/app/auth/user/lib/css/index.css";
-import {checkEmail, encodeName, matchingPasswords, nameValidation, validationInput} from "@/app/enigma";
+import {
+  checkEmail,
+  encodeName,
+  matchingPasswords,
+  nameValidation,
+  validationInput,
+} from "@/app/enigma";
 import { addClient, fetchData } from "@/app/fetch";
 import {
   authCompletedFormType,
