@@ -15,7 +15,13 @@ import {
   userInfoKey,
   UserTokenInfo,
 } from "@/app/classes";
-import { encodeName } from "@/app/enigma";
+import {
+  checkEmail,
+  encodeName,
+  matchingPasswords,
+  nameValidation,
+  validationInput,
+} from "@/app/enigma";
 import { addClient, fetchData } from "@/app/fetch";
 import moment from "moment";
 function UserRegMain() {
@@ -97,6 +103,24 @@ function UserRegMain() {
     setOpenAuthCompletedForm(true);
   };
 
+  function validity(value: string) {
+    setPassword(value);
+    validationInput();
+  }
+  function validityMatch(value: string) {
+    setCheckPassword(value);
+    matchingPasswords();
+  }
+
+  function validityName(value: string) {
+    setName(value);
+    nameValidation();
+  }
+  function validityEmail(value: string) {
+    setEmail(value);
+    checkEmail();
+  }
+
   return (
     <>
       {isOpenAuthFailedForm ? (
@@ -166,7 +190,7 @@ function UserRegMain() {
                 minLength={2}
                 maxLength={26}
                 onChange={(e: { target: { value: string } }) =>
-                  setName(e.target.value)
+                  validityName(e.target.value)
                 }
               />
             </div>
@@ -185,7 +209,7 @@ function UserRegMain() {
                 name="email"
                 placeholder="example@abc.xyz"
                 onChange={(e: { target: { value: string } }) =>
-                  setEmail(e.target.value)
+                  validityEmail(e.target.value)
                 }
               />
             </div>
@@ -200,8 +224,9 @@ function UserRegMain() {
                 placeholder="Your password"
                 minLength={6}
                 maxLength={30}
+                onBlur={validationInput}
                 onChange={(e: { target: { value: string } }) =>
-                  setPassword(e.target.value)
+                  validity(e.target.value)
                 }
               />
             </div>
@@ -215,7 +240,7 @@ function UserRegMain() {
                 name="cpassword"
                 placeholder="Repeat password"
                 onChange={(e: { target: { value: string } }) =>
-                  setCheckPassword(e.target.value)
+                  validityMatch(e.target.value)
                 }
               />
             </div>

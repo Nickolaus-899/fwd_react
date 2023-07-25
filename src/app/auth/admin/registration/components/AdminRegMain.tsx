@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import icon from "@/app/auth/user/lib/images/fork-and-knife.svg";
 import "@/app/auth/user/lib/css/index.css";
-import { encodeName } from "@/app/enigma";
+import {checkEmail, encodeName, matchingPasswords, nameValidation, validationInput} from "@/app/enigma";
 import { addClient, fetchData } from "@/app/fetch";
 import {
   authCompletedFormType,
@@ -102,6 +102,23 @@ function AdminRegMain() {
   const openCompletedHandler = () => {
     setOpenAuthCompletedForm(true);
   };
+  function validity(value: string) {
+    setPassword(value);
+    validationInput();
+  }
+  function validityMatch(value: string) {
+    setCheckPassword(value);
+    matchingPasswords();
+  }
+
+  function validityName(value: string) {
+    setName(value);
+    nameValidation();
+  }
+  function validityEmail(value: string) {
+    setEmail(value);
+    checkEmail();
+  }
 
   return (
     <>
@@ -165,7 +182,7 @@ function AdminRegMain() {
                 minLength={2}
                 maxLength={26}
                 onChange={(e: { target: { value: string } }) =>
-                  setName(e.target.value)
+                  validityName(e.target.value)
                 }
               />
             </div>
@@ -206,7 +223,7 @@ function AdminRegMain() {
                 placeholder="example@abc.xyz"
                 value={email}
                 onChange={(e: { target: { value: string } }) =>
-                  setEmail(e.target.value)
+                  validityEmail(e.target.value)
                 }
               />
             </div>
@@ -222,7 +239,7 @@ function AdminRegMain() {
                 minLength={6}
                 maxLength={30}
                 onChange={(e: { target: { value: string } }) =>
-                  setPassword(e.target.value)
+                  validity(e.target.value)
                 }
               />
             </div>
@@ -236,7 +253,7 @@ function AdminRegMain() {
                 placeholder="Repeat password"
                 value={checkPassword}
                 onChange={(e: { target: { value: string } }) =>
-                  setCheckPassword(e.target.value)
+                  validityMatch(e.target.value)
                 }
               />
             </div>

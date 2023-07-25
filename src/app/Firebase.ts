@@ -41,7 +41,6 @@ export async function setNewClientDB(client: Client) {
   const clientSnapshot = await getDocs(clientsCol);
   let clients = clientSnapshot.docs;
   let clients_data = clients.map((doc) => doc.data());
-  let numberOfClients = Object.keys(clients_data[0]).length;
 
   await addDoc(clientsCol, client);
 

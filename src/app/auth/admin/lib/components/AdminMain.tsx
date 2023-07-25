@@ -144,9 +144,6 @@ function AdminMain() {
             >
               Create an account
             </a>
-            <a className="login-screen-right block-display" href="">
-              Forgot password?
-            </a>
           </div>
         </div>
       </section>
