@@ -42,8 +42,8 @@
 .PopularItemImg {
   border-radius: 20px;
 
-  /*width: 100%;*/
-  width: 40vh;
+  width: 100%;
+  max-width: 40vh;
 }
 
 .FoodText {
