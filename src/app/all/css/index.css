@@ -46,7 +46,7 @@
   max-width: 90vw;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .PopularItemImg {
     border-radius: 20px;
 
