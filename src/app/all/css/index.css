@@ -34,7 +34,7 @@
 }
 
 .PopularList {
-  margin-left: -100px;
+  margin-right: 100px;
 
   flex-wrap: wrap;
 }
@@ -43,7 +43,16 @@
   border-radius: 20px;
 
   width: 100%;
-  max-width: 40vh;
+  max-width: 90vw;
+}
+
+@media (min-width: 900px) {
+  .PopularItemImg {
+    border-radius: 20px;
+
+    width: 100%;
+    max-width: 20vw;
+  }
 }
 
 .FoodText {
