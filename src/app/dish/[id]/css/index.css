@@ -18,7 +18,7 @@
   margin-right: 20vw;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .DishCharsList {
     list-style-type: none;
     margin-top: 5%;

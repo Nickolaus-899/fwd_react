@@ -20,6 +20,7 @@
 
 .FoodItemInList {
   display: flex;
+  flex-direction: column;
 }
 
 .FoodItemInListPosition {
@@ -40,21 +41,47 @@
   align-items: flex-start;
 
   margin-left: 6vw;
+  margin-top: 10px;
 }
 
 .FoodItemInListInfo h1 {
-  font-size: 3vw;
+  font-size: 3vh;
 }
 
 .FoodItemInListInfo div {
-  font-size: 2vw;
+  font-size: 2vh;
 }
 
 .FoodItemInListImage {
-  width: 30vw;
+  width: 50vw;
   height: 100%;
 
   border-radius: 4vw;
+}
+
+
+@media (min-width: 800px) {
+  .FoodItemInListImage {
+    width: 30vw;
+    height: 100%;
+
+    border-radius: 4vw;
+  }
+  .FoodItemInList {
+    display: flex;
+    flex-direction: row;
+  }
+  .FoodItemInListInfo {
+    margin-top: -10px;
+  }
+
+  .FoodItemInListInfo h1 {
+    font-size: 3vw;
+  }
+
+  .FoodItemInListInfo div {
+    font-size: 2vw;
+  }
 }
 
 .VeggieText {
