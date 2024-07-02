@@ -14,9 +14,9 @@ function SomeText() {
     <>
       <div className={`${footerText} ${someText} ${dancingScript.className}`}>
         <div>InnoFood</div>
-        <text className="Secret1">N</text>
-        <text className="Secret2">&</text>
-        <text className="Secret3">K</text>
+        <text className="Secret1">Di</text>
+        <text className="Secret2">a</text>
+        <text className="Secret3">na</text>
       </div>
     </>
   );
